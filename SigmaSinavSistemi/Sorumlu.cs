@@ -11,9 +11,9 @@ namespace SigmaSinavSistemi
 {
     public partial class Sorumlu : Form
     {
-        public static int SoruAdet = 10;
+        public static int SoruAdet = 10;//sınav ayarlarında buralar static bir şekilde değişmeli
         public static int Sure = 10;
-        SoruHavuzu soru = new SoruHavuzu();
+        SoruHavuzu sorular = new SoruHavuzu();
         public Sorumlu()
         {
             InitializeComponent();
@@ -38,22 +38,20 @@ namespace SigmaSinavSistemi
 
             data_Sorular.Columns[5].HeaderText = "DOĞRU CEVAP";
             data_Sorular.Columns[5].Width = 100;
-            txt_sorusay.Text = soru.Listele(0).Count.ToString();
 
             foreach (DataGridViewColumn item in data_Sorular.Columns)
             {
                 item.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 item.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-
         }
         public void SoruListele()
         {
-            data_Sorular.DataSource = soru.Listele(0);
+            data_Sorular.DataSource = sorular.Listele(0);
+            txt_sorusay.Text = sorular.Listele(0).Count.ToString();
         }
         private void btn_Gonder_Click(object sender, EventArgs e)
         {
-            
             string imagefile = Path.GetFileName(pic_soru.ImageLocation);
             string imagepath = Path.Combine(Application.StartupPath + "\\soru\\" + imagefile);
             if (!File.Exists(imagepath))
@@ -61,9 +59,9 @@ namespace SigmaSinavSistemi
                 File.Copy(pic_soru.ImageLocation, imagepath, true);
                 SoruHavuzu soru = new SoruHavuzu();
                 soru.GorselAd = txt_gozat.Text;
-                soru.KonuId = cmb_konu.SelectedIndex+1;
+                soru.KonuId = cmb_konu.SelectedIndex + 1;
                 soru.Seviye = cmb_seviye.Text;
-                soru.DogruCevap = cmb_dogru.SelectedIndex+1;
+                soru.DogruCevap = cmb_dogru.SelectedIndex + 1;
                 MessageBox.Show(soru.SoruEkle());
                 txt_gozat.Text = "";
                 cmb_dogru.Text = "--Seçin--";
@@ -80,7 +78,6 @@ namespace SigmaSinavSistemi
                 cmb_seviye.Text = "--Seçin---";
             }
             SoruListele();
-            txt_sorusay.Text = soru.Listele(0).Count.ToString();
         }
 
         private void btn_gozat_Click(object sender, EventArgs e)
@@ -91,21 +88,20 @@ namespace SigmaSinavSistemi
             if (resimsec.ShowDialog() == DialogResult.OK)
             {
                 pic_soru.ImageLocation = resimsec.FileName;
-
             }
             txt_gozat.Text = Path.GetFileName(resimsec.FileName);
         }
 
-        
+
 
         private void btn_Guncelle_Click(object sender, EventArgs e)
         {
-            int konuid = cmb_gkonu.SelectedIndex+1;
+            int konuid = cmb_gkonu.SelectedIndex + 1;
             string Seviye = cmb_gseviye.Text;
             string DogruCevap = cmb_gDogru.Text;
             int Id = int.Parse(data_Sorular.CurrentRow.Cells[0].Value.ToString());
 
-            soru.Guncelle(Id,konuid,Seviye,DogruCevap);
+            sorular.Guncelle(Id, konuid, Seviye, DogruCevap);
 
             MessageBox.Show("Seçilen soru güncellenmiştir.");
             cmb_gDogru.Text = "--Seçin--";
@@ -115,7 +111,6 @@ namespace SigmaSinavSistemi
             txt_Id.Text = "";
             data_Sorular.ClearSelection();
             SoruListele();
-            txt_sorusay.Text = soru.Listele(0).Count.ToString();
         }
 
         private void btn_Sil_Click(object sender, EventArgs e)
@@ -123,7 +118,7 @@ namespace SigmaSinavSistemi
             int Id = int.Parse(data_Sorular.CurrentRow.Cells[0].Value.ToString());
             string imagefile = Path.GetFileName(pic_soru.ImageLocation);
             string uzanti = Path.Combine(Application.StartupPath + "\\soru\\" + imagefile);
-            soru.Sil(Id);
+            sorular.Sil(Id);
             if (System.IO.File.Exists(uzanti))
             {
                 System.IO.File.Delete(uzanti);
@@ -136,13 +131,12 @@ namespace SigmaSinavSistemi
             txt_Id.Text = "";
             data_Sorular.ClearSelection();
             SoruListele();
-            txt_sorusay.Text = soru.Listele(0).Count.ToString();
         }
 
         private void cmb_listeleme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-                data_Sorular.DataSource= soru.Listele(cmb_listeleme.SelectedIndex + 1);
+
+            data_Sorular.DataSource = sorular.Listele(cmb_listeleme.SelectedIndex + 1);
         }
 
         private void btn_tumunugoster_Click(object sender, EventArgs e)
@@ -178,6 +172,17 @@ namespace SigmaSinavSistemi
         private void btn_adetonay_Click(object sender, EventArgs e)
         {
             //SoruHavuzu.soruSayi = int.Parse(num_adet.Value.ToString());
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            DialogResult start = MessageBox.Show("Sınav başlatılsın mı?", "Onayla", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (start == DialogResult.Yes)
+            {
+                Sinav sv = new Sinav();
+                sv.Show();
+                this.Close();
+            }
         }
     }
 }

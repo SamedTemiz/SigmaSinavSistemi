@@ -63,15 +63,12 @@ namespace SigmaSinavSistemi
             this.btn_Sil = new System.Windows.Forms.Button();
             this.btn_Guncelle = new System.Windows.Forms.Button();
             this.data_Sorular = new MetroFramework.Controls.MetroGrid();
-            this.num_adet = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_adetonay = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_soru)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sorular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -89,9 +86,7 @@ namespace SigmaSinavSistemi
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
-            this.tabPage1.Controls.Add(this.btn_adetonay);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.num_adet);
+            this.tabPage1.Controls.Add(this.btn_close);
             this.tabPage1.Controls.Add(this.lbl_Tarih);
             this.tabPage1.Controls.Add(this.btn_Gonder);
             this.tabPage1.Controls.Add(this.lbl_dogru);
@@ -527,40 +522,19 @@ namespace SigmaSinavSistemi
             this.data_Sorular.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Sorular_CellDoubleClick);
             this.data_Sorular.SelectionChanged += new System.EventHandler(this.data_Sorular_SelectionChanged);
             // 
-            // num_adet
+            // btn_close
             // 
-            this.num_adet.Font = new System.Drawing.Font("Segoe UI Symbol", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.num_adet.Location = new System.Drawing.Point(156, 372);
-            this.num_adet.Name = "num_adet";
-            this.num_adet.Size = new System.Drawing.Size(57, 34);
-            this.num_adet.TabIndex = 7;
-            this.num_adet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.num_adet.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(25, 378);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 26);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "SINAV SORU SAYISI:";
-            // 
-            // btn_adetonay
-            // 
-            this.btn_adetonay.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_adetonay.Location = new System.Drawing.Point(219, 372);
-            this.btn_adetonay.Name = "btn_adetonay";
-            this.btn_adetonay.Size = new System.Drawing.Size(75, 34);
-            this.btn_adetonay.TabIndex = 9;
-            this.btn_adetonay.Text = "ONAYLA";
-            this.btn_adetonay.UseVisualStyleBackColor = true;
-            this.btn_adetonay.Click += new System.EventHandler(this.btn_adetonay_Click);
+            this.btn_close.BackColor = System.Drawing.Color.White;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_close.Location = new System.Drawing.Point(884, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(25, 25);
+            this.btn_close.TabIndex = 17;
+            this.btn_close.Text = "X";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // Sorumlu
             // 
@@ -580,7 +554,6 @@ namespace SigmaSinavSistemi
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sorular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,8 +590,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Label lbl_Id;
         private System.Windows.Forms.TextBox txt_sorusay;
         private System.Windows.Forms.Label lbl_sorusay;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown num_adet;
-        private System.Windows.Forms.Button btn_adetonay;
+        private System.Windows.Forms.Button btn_close;
     }
 }

@@ -17,7 +17,7 @@ namespace SigmaSinavSistemi
         Sonuclar sonuc = new Sonuclar();
         DateTime target;
         TimeSpan count = TimeSpan.FromMinutes(Sorumlu.Sure);//Sınav süresi *dakika
-        int NO = 1, sure;
+        int NO = 1;
         public Sinav()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace SigmaSinavSistemi
             radio_Bos.Checked = true;
             target = DateTime.Now.Add(count);
             timer1.Start();
-            Sonuclar.toplamSoru = sorular.soruSayi;
+            sonuc.ToplamSoru = sorular.soruSayi;
             //--------------------------------------------------------------------------------------
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
@@ -141,8 +141,10 @@ namespace SigmaSinavSistemi
                 timer1.Stop();
                 int dakika = (Sorumlu.Sure - int.Parse(lbl_sure.Text.Substring(3, 2))) - 1;
                 int saniye = 60 - int.Parse(lbl_sure.Text.Substring(6, 2));
-                Sonuclar.harcanan_sure = string.Format("{0} dakika {1} saniye", dakika, saniye);
+                sonuc.HarcananSure = string.Format("{0} dakika {1} saniye", dakika, saniye);
+
                 MessageBox.Show(sonuc.SinaviBitir(sorular.sinav_soru));
+
                 Anasayfa a = new Anasayfa();
                 this.Close();
                 a.Show();
@@ -180,6 +182,13 @@ namespace SigmaSinavSistemi
             DialogResult bitir = MessageBox.Show("Sınavın sonlandırılsın mı?", "Onayla", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (bitir == DialogResult.Yes)
             {
+                timer1.Stop();
+                int dakika = (Sorumlu.Sure - int.Parse(lbl_sure.Text.Substring(3, 2))) - 1;
+                int saniye = 60 - int.Parse(lbl_sure.Text.Substring(6, 2));
+                sonuc.HarcananSure = string.Format("{0} dakika {1} saniye", dakika, saniye);
+
+                MessageBox.Show(sonuc.SinaviBitir(sorular.sinav_soru));
+
                 Anasayfa a = new Anasayfa();
                 this.Close();
                 a.Show();

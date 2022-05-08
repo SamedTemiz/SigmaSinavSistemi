@@ -14,10 +14,10 @@ namespace SigmaSinavSistemi
         {
             Baglan();
         }
+        //internal olanlar public ti
         public int SoruId { get; set; }
         public DateTime GuncelTarih { get; set; }
         public DateTime HatirlatmaTarihi { get; set; }
-        public int Basari { get; set; }
 
         public List<Sigma> SoruOzellik()
         {
@@ -32,7 +32,6 @@ namespace SigmaSinavSistemi
                 sigma.GuncelTarih = Convert.ToDateTime(oku[2].ToString());
                 sigma.HatirlatmaTarihi = Convert.ToDateTime(oku[3].ToString());
                 sigma.Derece = int.Parse(oku[4].ToString());
-                sigma.Basari = int.Parse(oku[5].ToString());
                 sistem.Add(sigma);
             }
             conn.Close();
@@ -49,11 +48,11 @@ namespace SigmaSinavSistemi
         {
             int adet = 0;
             conn.Open();
-            SqlCommand sayi = new SqlCommand("SELECT COUNT(*) FROM Sigma WHERE Derece > 0 AND GuncelTarih >= HatirlatmaTarih", conn);
+            SqlCommand sayi = new SqlCommand("SELECT COUNT(*) FROM Sigma WHERE Derece > 0 AND GuncelTarih >= HatirlatmaTarih AND Basari = 0", conn);
             adet = (int)sayi.ExecuteScalar();
             int[] dereceli = new int[adet];
             //Dereceli ve hatirlatma tarihi uygun olan soruları çekiyoruz
-            cmd = new SqlCommand("SELECT SoruId FROM Sigma WHERE Derece > 0 AND GuncelTarih >= HatirlatmaTarih", conn);
+            cmd = new SqlCommand("SELECT SoruId FROM Sigma WHERE Derece > 0 AND GuncelTarih >= HatirlatmaTarih AND Basari = 0", conn);
             SqlDataReader oku = cmd.ExecuteReader();
             int i = 0;
             while (oku.Read())

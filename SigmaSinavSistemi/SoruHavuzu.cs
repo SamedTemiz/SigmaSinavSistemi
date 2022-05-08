@@ -10,14 +10,15 @@ namespace SigmaSinavSistemi
         {
             Baglan();
         }
+        //internal olanlar public ti
         public int Id { get; set; }
         public int KonuId { get; set; }
         public string KonuAdi { get; set; }
         public string GorselAd { get; set; }
         public string Seviye { get; set; }
         public int DogruCevap { get; set; }
-        public int YanlisSay { get; set; }
         public int Derece { get; set; }
+        public int Basari { get; set; }
         public int[,] sinav_soru { get; set; }
         public int soruSayi = Sorumlu.SoruAdet;
         public List<SoruHavuzu> Listele(int konuID)
@@ -29,7 +30,7 @@ namespace SigmaSinavSistemi
             {
                 kosul = "";
             }
-            cmd = new SqlCommand("SELECT SoruHavuzu.Id, SoruHavuzu.KonuId, Konular.KonuAdi, SoruHavuzu.GorselAd, SoruHavuzu.Seviye, SoruHavuzu.DogruCevap, Sigma.Derece FROM SoruHavuzu INNER JOIN Konular ON SoruHavuzu.KonuId = Konular.KonuId INNER JOIN Sigma ON SoruHavuzu.Id = Sigma.SoruId " + kosul, conn);
+            cmd = new SqlCommand("SELECT SoruHavuzu.Id, SoruHavuzu.KonuId, Konular.KonuAdi, SoruHavuzu.GorselAd, SoruHavuzu.Seviye, SoruHavuzu.DogruCevap, Sigma.Derece, Sigma.Basari FROM SoruHavuzu INNER JOIN Konular ON SoruHavuzu.KonuId = Konular.KonuId INNER JOIN Sigma ON SoruHavuzu.Id = Sigma.SoruId " + kosul, conn);
             SqlDataReader oku = cmd.ExecuteReader();
             while (oku.Read())
             {
@@ -41,6 +42,7 @@ namespace SigmaSinavSistemi
                 soru.Seviye = oku[4].ToString();
                 soru.DogruCevap = int.Parse(oku[5].ToString());
                 soru.Derece = int.Parse(oku[6].ToString());//Sigma tablosundan
+                soru.Basari = int.Parse(oku[7].ToString());//Sigma tablosundan
                 havuz.Add(soru);
             }
             conn.Close();
@@ -61,7 +63,7 @@ namespace SigmaSinavSistemi
             }
             sinav_soru = new int[soruSayi + 1, 3]; //matris oluşturuyoruz
 
-            int miktar = Listele(0).FindAll(x => x.Derece == 0).Count;//Derecesi 0 olanların miktarı
+            int miktar = Listele(0).FindAll(x => (x.Derece == 0) && (x.Basari == 0)).Count;//Derecesi 0 olanların miktarı
             int[] soruID = new int[miktar];//soru havuzundan soru id leri için dizi
             int a = 0;
             foreach (var x in Listele(0).FindAll(x => x.Derece == 0))
@@ -72,9 +74,9 @@ namespace SigmaSinavSistemi
             int i = 0, b = 1;
             while (b < soruSayi + 1)//istenilen soru sayısı kadar rastgele sınav hazırlanıyor
             {
-                if (soruSayi >= 10 && b < 11)//soru sayısı 10 dan fazla ise dereceli var demektir
+                if (soruSayi >= Sorumlu.SoruAdet && b < Sorumlu.SoruAdet + 1)//soru sayısı 10 dan fazla ise dereceli var demektir
                 {
-                    tekrar:
+                tekrar:
                     int rastgele = rnd.Next(0, soruID.Length);//id lerden rastgele belirliyoruz
                     soru = Listele(0).Find(x => x.Id == soruID[rastgele]);
                     var tekrar = sinav.Find(x => x.Id == soruID[rastgele]);//soru kontrolü yapıyoruz
@@ -88,7 +90,7 @@ namespace SigmaSinavSistemi
                         goto tekrar;
                     }
                 }
-                else if(dereceli_sorular != null)
+                else if (dereceli_sorular != null)
                 {
                     soru = Listele(0).Find(x => x.Id == dereceli_sorular[i]);
                     sinav.Add(soru);
@@ -99,14 +101,13 @@ namespace SigmaSinavSistemi
             }
             return sinav;
         }
-
         //SORUMLU SAYFASI
         public string SoruEkle()
         {
             int kontrol = 0;
             string durum = "Hata";
             conn.Open();
-            cmd = new SqlCommand("INSERT INTO SoruHavuzu(KonuID,GorselAd,Seviye,DogruCevap)" + "VALUES('" + KonuId + "','" + GorselAd + "','" + Seviye + "','" + DogruCevap + "')", conn);
+            cmd = new SqlCommand("INSERT INTO SoruHavuzu(KonuID, GorselAd, Seviye, DogruCevap)" + "VALUES('" + KonuId + "','" + GorselAd + "','" + Seviye + "','" + DogruCevap + "')", conn);
 
             kontrol = cmd.ExecuteNonQuery();
             if (kontrol == 1)
@@ -116,26 +117,26 @@ namespace SigmaSinavSistemi
             conn.Close();
             return durum;
         }
-        public bool Guncelle(int id, int konuid,string seviye,string dogru)
+        public bool Guncelle(int id, int konuid, string seviye, string dogru)
         {
             bool kontol = false;
             cmd = new SqlCommand("Update SoruHavuzu" + " Set KonuId='" + konuid + "',Seviye='" + seviye + "',DogruCevap='" + dogru + "' where Id='" + id + "'", conn);
             conn.Open();
-            if (cmd.ExecuteNonQuery() !=-1)
+            if (cmd.ExecuteNonQuery() != -1)
             {
                 kontol = true;
             }
             conn.Close();
             return kontol;
         }
-        public bool Sil(int id) 
+        public bool Sil(int id)
         {
             bool kontrol = false;
             cmd = new SqlCommand("DELETE FROM SoruHavuzu WHERE Id = '" + id + "'", conn);
             conn.Open();
             if (cmd.ExecuteNonQuery() != -1)
             {
-                kontrol = true; 
+                kontrol = true;
             }
             conn.Close();
             return kontrol;

@@ -30,8 +30,14 @@ namespace SigmaSinavSistemi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Istatistik));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tab_sonuc = new System.Windows.Forms.TabPage();
+            this.lbl_sinavTarih = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.data_sonuclistesi = new MetroFramework.Controls.MetroGrid();
             this.btn_yazdir = new System.Windows.Forms.Button();
             this.lbl_harcananSure = new System.Windows.Forms.Label();
             this.lbl_sigmaSoru = new System.Windows.Forms.Label();
@@ -53,14 +59,17 @@ namespace SigmaSinavSistemi
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_sinavno = new System.Windows.Forms.Label();
             this.tab_stats = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.metroTabControl1.SuspendLayout();
             this.tab_sonuc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_sonuclistesi)).BeginInit();
             this.tab_stats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +89,9 @@ namespace SigmaSinavSistemi
             // tab_sonuc
             // 
             this.tab_sonuc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tab_sonuc.BackgroundImage")));
+            this.tab_sonuc.Controls.Add(this.lbl_sinavTarih);
+            this.tab_sonuc.Controls.Add(this.label1);
+            this.tab_sonuc.Controls.Add(this.data_sonuclistesi);
             this.tab_sonuc.Controls.Add(this.btn_yazdir);
             this.tab_sonuc.Controls.Add(this.lbl_harcananSure);
             this.tab_sonuc.Controls.Add(this.lbl_sigmaSoru);
@@ -101,12 +113,88 @@ namespace SigmaSinavSistemi
             this.tab_sonuc.Controls.Add(this.label4);
             this.tab_sonuc.Controls.Add(this.label3);
             this.tab_sonuc.Controls.Add(this.label2);
-            this.tab_sonuc.Controls.Add(this.label1);
+            this.tab_sonuc.Controls.Add(this.lbl_sinavno);
             this.tab_sonuc.Location = new System.Drawing.Point(4, 38);
             this.tab_sonuc.Name = "tab_sonuc";
             this.tab_sonuc.Size = new System.Drawing.Size(1042, 558);
             this.tab_sonuc.TabIndex = 0;
-            this.tab_sonuc.Text = "SINAV SONUCU";
+            this.tab_sonuc.Text = "SINAV SONUÇLARI";
+            // 
+            // lbl_sinavTarih
+            // 
+            this.lbl_sinavTarih.AutoSize = true;
+            this.lbl_sinavTarih.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sinavTarih.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sinavTarih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.lbl_sinavTarih.Location = new System.Drawing.Point(427, 73);
+            this.lbl_sinavTarih.Name = "lbl_sinavTarih";
+            this.lbl_sinavTarih.Size = new System.Drawing.Size(100, 30);
+            this.lbl_sinavTarih.TabIndex = 37;
+            this.lbl_sinavTarih.Text = "SINAV TARİHİ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.label1.Location = new System.Drawing.Point(276, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 41);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "SINAV TARİHİ";
+            // 
+            // data_sonuclistesi
+            // 
+            this.data_sonuclistesi.AllowUserToAddRows = false;
+            this.data_sonuclistesi.AllowUserToDeleteRows = false;
+            this.data_sonuclistesi.AllowUserToResizeRows = false;
+            this.data_sonuclistesi.BackgroundColor = System.Drawing.Color.White;
+            this.data_sonuclistesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.data_sonuclistesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.data_sonuclistesi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_sonuclistesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.data_sonuclistesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_sonuclistesi.DefaultCellStyle = dataGridViewCellStyle2;
+            this.data_sonuclistesi.EnableHeadersVisualStyles = false;
+            this.data_sonuclistesi.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.data_sonuclistesi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.data_sonuclistesi.Location = new System.Drawing.Point(644, 27);
+            this.data_sonuclistesi.Name = "data_sonuclistesi";
+            this.data_sonuclistesi.ReadOnly = true;
+            this.data_sonuclistesi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_sonuclistesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.data_sonuclistesi.RowHeadersVisible = false;
+            this.data_sonuclistesi.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.data_sonuclistesi.RowTemplate.Height = 25;
+            this.data_sonuclistesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_sonuclistesi.Size = new System.Drawing.Size(369, 150);
+            this.data_sonuclistesi.TabIndex = 35;
+            this.data_sonuclistesi.UseCustomBackColor = true;
+            this.data_sonuclistesi.UseCustomForeColor = true;
+            this.data_sonuclistesi.UseStyleColors = true;
+            this.data_sonuclistesi.SelectionChanged += new System.EventHandler(this.SinavSecimi);
             // 
             // btn_yazdir
             // 
@@ -367,17 +455,17 @@ namespace SigmaSinavSistemi
             this.label2.TabIndex = 12;
             this.label2.Text = "SORU SAYISI";
             // 
-            // label1
+            // lbl_sinavno
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label1.Location = new System.Drawing.Point(783, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 41);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "SON SINAV SONUÇLARI";
+            this.lbl_sinavno.AutoSize = true;
+            this.lbl_sinavno.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sinavno.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sinavno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.lbl_sinavno.Location = new System.Drawing.Point(276, 27);
+            this.lbl_sinavno.Name = "lbl_sinavno";
+            this.lbl_sinavno.Size = new System.Drawing.Size(117, 41);
+            this.lbl_sinavno.TabIndex = 11;
+            this.lbl_sinavno.Text = "SINAV NO :";
             // 
             // tab_stats
             // 
@@ -437,6 +525,21 @@ namespace SigmaSinavSistemi
             this.label9.TabIndex = 22;
             this.label9.Text = "KONU DAĞILIMI";
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Istatistik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -451,6 +554,7 @@ namespace SigmaSinavSistemi
             this.metroTabControl1.ResumeLayout(false);
             this.tab_sonuc.ResumeLayout(false);
             this.tab_sonuc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_sonuclistesi)).EndInit();
             this.tab_stats.ResumeLayout(false);
             this.tab_stats.PerformLayout();
             this.ResumeLayout(false);
@@ -476,7 +580,7 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_sinavno;
         private System.Windows.Forms.TabPage tab_stats;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
@@ -488,5 +592,10 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Label lbl_toplamSoru;
         private System.Windows.Forms.Button btn_yazdir;
         private System.Windows.Forms.Button button3;
+        private MetroFramework.Controls.MetroGrid data_sonuclistesi;
+        private System.Windows.Forms.Label lbl_sinavTarih;
+        private System.Windows.Forms.Label label1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -51,7 +51,7 @@ namespace SigmaSinavSistemi
             this.txt_kulad.Name = "txt_kulad";
             this.txt_kulad.PlaceholderText = "KULLANICI ADI";
             this.txt_kulad.Size = new System.Drawing.Size(175, 29);
-            this.txt_kulad.TabIndex = 2;
+            this.txt_kulad.TabIndex = 1;
             // 
             // txt_sifre
             // 
@@ -61,7 +61,7 @@ namespace SigmaSinavSistemi
             this.txt_sifre.PasswordChar = '*';
             this.txt_sifre.PlaceholderText = "ŞİFRE";
             this.txt_sifre.Size = new System.Drawing.Size(175, 29);
-            this.txt_sifre.TabIndex = 12;
+            this.txt_sifre.TabIndex = 2;
             // 
             // link_sifre
             // 
@@ -76,6 +76,7 @@ namespace SigmaSinavSistemi
             this.link_sifre.TabStop = true;
             this.link_sifre.Text = "Şifremi unuttum";
             this.link_sifre.VisitedLinkColor = System.Drawing.Color.Black;
+            this.link_sifre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_sifre_LinkClicked);
             // 
             // link_kayit
             // 
@@ -90,6 +91,7 @@ namespace SigmaSinavSistemi
             this.link_kayit.TabStop = true;
             this.link_kayit.Text = "Kayıt ol";
             this.link_kayit.VisitedLinkColor = System.Drawing.Color.Black;
+            this.link_kayit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_kayit_LinkClicked);
             // 
             // lbl_kulad
             // 
@@ -123,6 +125,7 @@ namespace SigmaSinavSistemi
             this.btn_hide.Size = new System.Drawing.Size(28, 26);
             this.btn_hide.TabIndex = 29;
             this.btn_hide.UseVisualStyleBackColor = false;
+            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
             // 
             // btn_show
             // 
@@ -134,6 +137,7 @@ namespace SigmaSinavSistemi
             this.btn_show.Size = new System.Drawing.Size(28, 26);
             this.btn_show.TabIndex = 30;
             this.btn_show.UseVisualStyleBackColor = false;
+            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
             // label4
             // 
@@ -164,7 +168,7 @@ namespace SigmaSinavSistemi
             this.btn_giris.Location = new System.Drawing.Point(375, 275);
             this.btn_giris.Name = "btn_giris";
             this.btn_giris.Size = new System.Drawing.Size(175, 29);
-            this.btn_giris.TabIndex = 33;
+            this.btn_giris.TabIndex = 3;
             this.btn_giris.Text = "GİRİŞ YAP";
             this.btn_giris.UseVisualStyleBackColor = true;
             this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click);

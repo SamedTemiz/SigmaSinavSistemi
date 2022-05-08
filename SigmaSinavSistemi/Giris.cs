@@ -11,6 +11,7 @@ namespace SigmaSinavSistemi
 {
     public partial class Giris : Form
     {
+        public static int kulid;
         public static string kulad;
         Sigma sigma = new Sigma();
         public Giris()
@@ -50,8 +51,8 @@ namespace SigmaSinavSistemi
             var oturum = k.girisKullanici(txt_kulad.Text, txt_sifre.Text);
             if (oturum != null)
             {
-                kulad = txt_kulad.Text;
-
+                kulid = oturum.Id;
+                kulad = oturum.KullaniciAd;
                 switch (oturum.KullaniciTipID)
                 {
 
@@ -85,6 +86,8 @@ namespace SigmaSinavSistemi
             Sifre form2 = new Sifre();
             form2.Show();
             this.Hide();
+
+           
         }
         private void link_kayit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -94,7 +97,7 @@ namespace SigmaSinavSistemi
         }
         private void btn_show_Click(object sender, EventArgs e)
         {
-            if(txt_sifre.PasswordChar == '*')
+            if (txt_sifre.PasswordChar == '*')
             {
                 btn_hide.BringToFront();
                 txt_sifre.PasswordChar = '\0';

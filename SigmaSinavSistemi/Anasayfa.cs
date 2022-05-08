@@ -107,7 +107,11 @@ namespace SigmaSinavSistemi
         }
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult shut = MessageBox.Show("Uygulama kapatılsın mı?", "Onayla", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (shut == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
         private void sınavÖzellikleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
