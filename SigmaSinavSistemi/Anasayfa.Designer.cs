@@ -55,7 +55,6 @@ namespace SigmaSinavSistemi
             this.t_saat = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Logo)).BeginInit();
@@ -106,7 +105,7 @@ namespace SigmaSinavSistemi
             // 
             this.sınavaGirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sınavaGirToolStripMenuItem.Image")));
             this.sınavaGirToolStripMenuItem.Name = "sınavaGirToolStripMenuItem";
-            this.sınavaGirToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.sınavaGirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.sınavaGirToolStripMenuItem.Text = "Sınava Gir";
             this.sınavaGirToolStripMenuItem.Click += new System.EventHandler(this.sınavaGirToolStripMenuItem_Click);
             // 
@@ -114,7 +113,7 @@ namespace SigmaSinavSistemi
             // 
             this.sınavÖzellikleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sınavÖzellikleriToolStripMenuItem.Image")));
             this.sınavÖzellikleriToolStripMenuItem.Name = "sınavÖzellikleriToolStripMenuItem";
-            this.sınavÖzellikleriToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.sınavÖzellikleriToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.sınavÖzellikleriToolStripMenuItem.Text = "Sınav Özellikleri";
             this.sınavÖzellikleriToolStripMenuItem.Click += new System.EventHandler(this.sınavÖzellikleriToolStripMenuItem_Click);
             // 
@@ -122,7 +121,7 @@ namespace SigmaSinavSistemi
             // 
             this.istatistikToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("istatistikToolStripMenuItem.Image")));
             this.istatistikToolStripMenuItem.Name = "istatistikToolStripMenuItem";
-            this.istatistikToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.istatistikToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.istatistikToolStripMenuItem.Text = "İstatistik";
             this.istatistikToolStripMenuItem.Click += new System.EventHandler(this.istatistikToolStripMenuItem_Click);
             // 
@@ -178,7 +177,6 @@ namespace SigmaSinavSistemi
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txt_SinavHakkinda);
             this.panel1.Controls.Add(this.lbl_SinavHakkinda);
             this.panel1.Controls.Add(this.txt_SigHakkinda);
@@ -306,15 +304,6 @@ namespace SigmaSinavSistemi
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(527, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -370,6 +359,5 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
     }
 }

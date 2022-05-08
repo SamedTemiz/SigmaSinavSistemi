@@ -63,57 +63,7 @@ namespace SigmaSinavSistemi
             }
             conn.Close();
             return dereceli;
-        }
-        public string SinaviBitir(int[,] sonuc)
-        {
-            string msj = "not";
-            string kmt = "not";
-            //int dogru, yanlis, bos;
-            //float basari;
-            //string konu;
-            int s_id, s_cvp;
-            for (int i = 1; i < soruSayi + Dereceliler().Length + 1; i++)
-            {
-                s_id = sonuc[i, 1];
-                s_cvp = sonuc[i, 2];
-                var soru = Listele(0).Find(x => x.Id == s_id);
-                int check = 0;
-                if (soru.DogruCevap == s_cvp)
-                {
-                    var sigma = SoruOzellik().Find(x => x.SoruId == s_id);
-                    switch (sigma.Derece)
-                    {
-                        case 0:
-                            kmt = "DATEADD(day, 1, GuncelTarih)";//Bir gün sonra tekrar sorulacak
-                            break;
-                        case 1:
-                            kmt = "DATEADD(week, 1, GuncelTarih)";//Bir hafta sonra tekrar sorulacak
-                            break;
-                        case 2:
-                            kmt = "DATEADD(month, 1, GuncelTarih)";//Bir ay sonra tekrar sorulacak
-                            break;
-                        case 3:
-                            kmt = "DATEADD(month, 3, GuncelTarih)";//Üç ay sonra tekrar sorulacak
-                            break;
-                        case 4:
-                            kmt = "DATEADD(month, 6, GuncelTarih)";//Altı ay sonra tekrar sorulacak
-                            break;
-                        case 5:
-                            kmt = "DATEADD(year, 1, GuncelTarih)";//Bir gün sonra tekrar sorulacak
-                            break;
-                    }
-                    cmd = new SqlCommand("UPDATE Sigma SET Derece += 1, HatirlatmaTarih = "+kmt+" WHERE SoruId = "+ s_id +" ", conn);
-                    conn.Open();
-                    check = cmd.ExecuteNonQuery();
-                }
-                if (check > 0)
-                    msj = "Test başarılı bir şekilde sonlandı.";
-                else
-                    msj = "HATA!";
-                conn.Close();
-            }
-            return msj;
-        }
+        }   
     }
 }
 

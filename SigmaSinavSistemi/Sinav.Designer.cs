@@ -307,6 +307,7 @@ namespace SigmaSinavSistemi
             this.Controls.Add(this.btn_bitir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sinav";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sinav";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Sinav_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Sinav_MouseMove);

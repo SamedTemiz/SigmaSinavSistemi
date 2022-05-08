@@ -19,8 +19,7 @@ namespace SigmaSinavSistemi
         public int YanlisSay { get; set; }
         public int Derece { get; set; }
         public int[,] sinav_soru { get; set; }
-        public int soruSayi = 10;
-
+        public int soruSayi = Sorumlu.SoruAdet;
         public List<SoruHavuzu> Listele(int konuID)
         {
             List<SoruHavuzu> havuz = new List<SoruHavuzu>();
@@ -64,24 +63,29 @@ namespace SigmaSinavSistemi
 
             int miktar = Listele(0).FindAll(x => x.Derece == 0).Count;//Derecesi 0 olanların miktarı
             int[] soruID = new int[miktar];//soru havuzundan soru id leri için dizi
-            int a = 0, b = 1;
+            int a = 0;
             foreach (var x in Listele(0).FindAll(x => x.Derece == 0))
             {
                 soruID[a] = x.Id;//Derecesi 0 olanların id si
                 a++;
             }
-            int i = 0;
+            int i = 0, b = 1;
             while (b < soruSayi + 1)//istenilen soru sayısı kadar rastgele sınav hazırlanıyor
             {
                 if (soruSayi >= 10 && b < 11)//soru sayısı 10 dan fazla ise dereceli var demektir
                 {
+                    tekrar:
                     int rastgele = rnd.Next(0, soruID.Length);//id lerden rastgele belirliyoruz
-                    soru = Listele(0).Find(x => (x.Id == soruID[rastgele]) && (x.Derece == 0));
+                    soru = Listele(0).Find(x => x.Id == soruID[rastgele]);
                     var tekrar = sinav.Find(x => x.Id == soruID[rastgele]);//soru kontrolü yapıyoruz
                     if (tekrar == null)//aynı soru yoksa ekliyoruz
                     {
                         sinav.Add(soru);
                         sinav_soru[b, 1] = soru.Id;
+                    }
+                    else
+                    {
+                        goto tekrar;
                     }
                 }
                 else if(dereceli_sorular != null)

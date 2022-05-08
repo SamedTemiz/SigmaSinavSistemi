@@ -11,6 +11,8 @@ namespace SigmaSinavSistemi
 {
     public partial class Sorumlu : Form
     {
+        public static int SoruAdet = 10;
+        public static int Sure = 10;
         SoruHavuzu soru = new SoruHavuzu();
         public Sorumlu()
         {

@@ -32,7 +32,20 @@ namespace SigmaSinavSistemi
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Istatistik));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tab_sonuc = new System.Windows.Forms.TabPage();
-            this.tab_stats = new System.Windows.Forms.TabPage();
+            this.btn_yazdir = new System.Windows.Forms.Button();
+            this.lbl_harcananSure = new System.Windows.Forms.Label();
+            this.lbl_sigmaSoru = new System.Windows.Forms.Label();
+            this.lbl_sinavSure = new System.Windows.Forms.Label();
+            this.lbl_cozulenSoru = new System.Windows.Forms.Label();
+            this.lbl_toplamSoru = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lbl_basari = new System.Windows.Forms.Label();
+            this.lbl_tarih = new System.Windows.Forms.Label();
+            this.lbl_bos = new System.Windows.Forms.Label();
+            this.lbl_yanlis = new System.Windows.Forms.Label();
+            this.lbl_dogru = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_close = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,17 +54,11 @@ namespace SigmaSinavSistemi
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tab_stats = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.metroTabControl1.SuspendLayout();
             this.tab_sonuc.SuspendLayout();
             this.tab_stats.SuspendLayout();
@@ -73,12 +80,18 @@ namespace SigmaSinavSistemi
             // tab_sonuc
             // 
             this.tab_sonuc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tab_sonuc.BackgroundImage")));
+            this.tab_sonuc.Controls.Add(this.btn_yazdir);
+            this.tab_sonuc.Controls.Add(this.lbl_harcananSure);
+            this.tab_sonuc.Controls.Add(this.lbl_sigmaSoru);
+            this.tab_sonuc.Controls.Add(this.lbl_sinavSure);
+            this.tab_sonuc.Controls.Add(this.lbl_cozulenSoru);
+            this.tab_sonuc.Controls.Add(this.lbl_toplamSoru);
             this.tab_sonuc.Controls.Add(this.label17);
-            this.tab_sonuc.Controls.Add(this.label16);
-            this.tab_sonuc.Controls.Add(this.label15);
-            this.tab_sonuc.Controls.Add(this.label14);
-            this.tab_sonuc.Controls.Add(this.label13);
-            this.tab_sonuc.Controls.Add(this.label12);
+            this.tab_sonuc.Controls.Add(this.lbl_basari);
+            this.tab_sonuc.Controls.Add(this.lbl_tarih);
+            this.tab_sonuc.Controls.Add(this.lbl_bos);
+            this.tab_sonuc.Controls.Add(this.lbl_yanlis);
+            this.tab_sonuc.Controls.Add(this.lbl_dogru);
             this.tab_sonuc.Controls.Add(this.label11);
             this.tab_sonuc.Controls.Add(this.btn_close);
             this.tab_sonuc.Controls.Add(this.label8);
@@ -95,28 +108,192 @@ namespace SigmaSinavSistemi
             this.tab_sonuc.TabIndex = 0;
             this.tab_sonuc.Text = "SINAV SONUCU";
             // 
-            // tab_stats
+            // btn_yazdir
             // 
-            this.tab_stats.Controls.Add(this.button1);
-            this.tab_stats.Controls.Add(this.label10);
-            this.tab_stats.Controls.Add(this.label9);
-            this.tab_stats.Location = new System.Drawing.Point(4, 38);
-            this.tab_stats.Name = "tab_stats";
-            this.tab_stats.Size = new System.Drawing.Size(1042, 558);
-            this.tab_stats.TabIndex = 1;
-            this.tab_stats.Text = "İSTATİSTİK";
+            this.btn_yazdir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_yazdir.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_yazdir.Image = ((System.Drawing.Image)(resources.GetObject("btn_yazdir.Image")));
+            this.btn_yazdir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_yazdir.Location = new System.Drawing.Point(833, 480);
+            this.btn_yazdir.Name = "btn_yazdir";
+            this.btn_yazdir.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btn_yazdir.Size = new System.Drawing.Size(180, 50);
+            this.btn_yazdir.TabIndex = 34;
+            this.btn_yazdir.Text = "BİLGİLERİ YAZDIR";
+            this.btn_yazdir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_yazdir.UseVisualStyleBackColor = true;
+            this.btn_yazdir.Click += new System.EventHandler(this.btn_yazdir_Click);
+            // 
+            // lbl_harcananSure
+            // 
+            this.lbl_harcananSure.AutoSize = true;
+            this.lbl_harcananSure.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_harcananSure.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_harcananSure.ForeColor = System.Drawing.Color.Black;
+            this.lbl_harcananSure.Location = new System.Drawing.Point(180, 120);
+            this.lbl_harcananSure.Name = "lbl_harcananSure";
+            this.lbl_harcananSure.Size = new System.Drawing.Size(28, 26);
+            this.lbl_harcananSure.TabIndex = 33;
+            this.lbl_harcananSure.Text = "10";
+            // 
+            // lbl_sigmaSoru
+            // 
+            this.lbl_sigmaSoru.AutoSize = true;
+            this.lbl_sigmaSoru.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sigmaSoru.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sigmaSoru.ForeColor = System.Drawing.Color.Black;
+            this.lbl_sigmaSoru.Location = new System.Drawing.Point(180, 151);
+            this.lbl_sigmaSoru.Name = "lbl_sigmaSoru";
+            this.lbl_sigmaSoru.Size = new System.Drawing.Size(28, 26);
+            this.lbl_sigmaSoru.TabIndex = 32;
+            this.lbl_sigmaSoru.Text = "10";
+            // 
+            // lbl_sinavSure
+            // 
+            this.lbl_sinavSure.AutoSize = true;
+            this.lbl_sinavSure.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sinavSure.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sinavSure.ForeColor = System.Drawing.Color.Black;
+            this.lbl_sinavSure.Location = new System.Drawing.Point(180, 89);
+            this.lbl_sinavSure.Name = "lbl_sinavSure";
+            this.lbl_sinavSure.Size = new System.Drawing.Size(28, 26);
+            this.lbl_sinavSure.TabIndex = 31;
+            this.lbl_sinavSure.Text = "10";
+            // 
+            // lbl_cozulenSoru
+            // 
+            this.lbl_cozulenSoru.AutoSize = true;
+            this.lbl_cozulenSoru.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cozulenSoru.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_cozulenSoru.ForeColor = System.Drawing.Color.Black;
+            this.lbl_cozulenSoru.Location = new System.Drawing.Point(180, 58);
+            this.lbl_cozulenSoru.Name = "lbl_cozulenSoru";
+            this.lbl_cozulenSoru.Size = new System.Drawing.Size(28, 26);
+            this.lbl_cozulenSoru.TabIndex = 30;
+            this.lbl_cozulenSoru.Text = "10";
+            // 
+            // lbl_toplamSoru
+            // 
+            this.lbl_toplamSoru.AutoSize = true;
+            this.lbl_toplamSoru.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_toplamSoru.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_toplamSoru.ForeColor = System.Drawing.Color.Black;
+            this.lbl_toplamSoru.Location = new System.Drawing.Point(180, 27);
+            this.lbl_toplamSoru.Name = "lbl_toplamSoru";
+            this.lbl_toplamSoru.Size = new System.Drawing.Size(28, 26);
+            this.lbl_toplamSoru.TabIndex = 29;
+            this.lbl_toplamSoru.Text = "10";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.label17.Location = new System.Drawing.Point(26, 120);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(139, 26);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "HARCANAN SÜRE(DK)";
+            // 
+            // lbl_basari
+            // 
+            this.lbl_basari.AutoSize = true;
+            this.lbl_basari.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_basari.Font = new System.Drawing.Font("Bebas Neue", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_basari.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.lbl_basari.Location = new System.Drawing.Point(373, 390);
+            this.lbl_basari.Name = "lbl_basari";
+            this.lbl_basari.Size = new System.Drawing.Size(277, 122);
+            this.lbl_basari.TabIndex = 27;
+            this.lbl_basari.Text = "%97,99";
+            // 
+            // lbl_tarih
+            // 
+            this.lbl_tarih.AutoSize = true;
+            this.lbl_tarih.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tarih.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_tarih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.lbl_tarih.Location = new System.Drawing.Point(26, 506);
+            this.lbl_tarih.Name = "lbl_tarih";
+            this.lbl_tarih.Size = new System.Drawing.Size(205, 30);
+            this.lbl_tarih.TabIndex = 26;
+            this.lbl_tarih.Text = "7 Mayıs Cumartesi | 2022";
+            // 
+            // lbl_bos
+            // 
+            this.lbl_bos.AutoSize = true;
+            this.lbl_bos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_bos.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_bos.ForeColor = System.Drawing.Color.White;
+            this.lbl_bos.Location = new System.Drawing.Point(747, 266);
+            this.lbl_bos.Name = "lbl_bos";
+            this.lbl_bos.Size = new System.Drawing.Size(38, 52);
+            this.lbl_bos.TabIndex = 25;
+            this.lbl_bos.Text = "9";
+            // 
+            // lbl_yanlis
+            // 
+            this.lbl_yanlis.AutoSize = true;
+            this.lbl_yanlis.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_yanlis.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_yanlis.ForeColor = System.Drawing.Color.White;
+            this.lbl_yanlis.Location = new System.Drawing.Point(473, 266);
+            this.lbl_yanlis.Name = "lbl_yanlis";
+            this.lbl_yanlis.Size = new System.Drawing.Size(38, 52);
+            this.lbl_yanlis.TabIndex = 24;
+            this.lbl_yanlis.Text = "9";
+            // 
+            // lbl_dogru
+            // 
+            this.lbl_dogru.AutoSize = true;
+            this.lbl_dogru.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_dogru.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_dogru.ForeColor = System.Drawing.Color.White;
+            this.lbl_dogru.Location = new System.Drawing.Point(197, 266);
+            this.lbl_dogru.Name = "lbl_dogru";
+            this.lbl_dogru.Size = new System.Drawing.Size(38, 52);
+            this.lbl_dogru.TabIndex = 0;
+            this.lbl_dogru.Text = "9";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.label11.Location = new System.Drawing.Point(26, 151);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(111, 26);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "SİGMA SORULARI";
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Location = new System.Drawing.Point(1017, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(25, 25);
+            this.btn_close.TabIndex = 22;
+            this.btn_close.Text = "X";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label8.Location = new System.Drawing.Point(26, 87);
+            this.label8.Location = new System.Drawing.Point(26, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 30);
+            this.label8.Size = new System.Drawing.Size(119, 26);
             this.label8.TabIndex = 18;
-            this.label8.Text = "SINAV SÜRESİ";
+            this.label8.Text = "SINAV SÜRESİ(DK)";
             // 
             // label7
             // 
@@ -124,7 +301,7 @@ namespace SigmaSinavSistemi
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label7.Location = new System.Drawing.Point(219, 436);
+            this.label7.Location = new System.Drawing.Point(257, 436);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 30);
             this.label7.TabIndex = 17;
@@ -170,11 +347,11 @@ namespace SigmaSinavSistemi
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label3.Location = new System.Drawing.Point(26, 57);
+            this.label3.Location = new System.Drawing.Point(26, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 30);
+            this.label3.Size = new System.Drawing.Size(140, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "ÇÖZÜLEN SORU SAYISI";
             // 
@@ -182,11 +359,11 @@ namespace SigmaSinavSistemi
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.label2.Location = new System.Drawing.Point(26, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 30);
+            this.label2.Size = new System.Drawing.Size(83, 26);
             this.label2.TabIndex = 12;
             this.label2.Text = "SORU SAYISI";
             // 
@@ -202,31 +379,32 @@ namespace SigmaSinavSistemi
             this.label1.TabIndex = 11;
             this.label1.Text = "SON SINAV SONUÇLARI";
             // 
-            // btn_close
+            // tab_stats
             // 
-            this.btn_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(1017, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(25, 25);
-            this.btn_close.TabIndex = 22;
-            this.btn_close.Text = "X";
-            this.btn_close.UseVisualStyleBackColor = false;
+            this.tab_stats.Controls.Add(this.button3);
+            this.tab_stats.Controls.Add(this.button1);
+            this.tab_stats.Controls.Add(this.label10);
+            this.tab_stats.Controls.Add(this.label9);
+            this.tab_stats.Location = new System.Drawing.Point(4, 38);
+            this.tab_stats.Name = "tab_stats";
+            this.tab_stats.Size = new System.Drawing.Size(1042, 558);
+            this.tab_stats.TabIndex = 1;
+            this.tab_stats.Text = "İSTATİSTİK";
             // 
-            // label11
+            // button3
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label11.Location = new System.Drawing.Point(26, 147);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 30);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "SİGMA SORULARI";
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(784, 351);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.button3.Size = new System.Drawing.Size(180, 50);
+            this.button3.TabIndex = 35;
+            this.button3.Text = "BİLGİLERİ YAZDIR";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -259,78 +437,6 @@ namespace SigmaSinavSistemi
             this.label9.TabIndex = 22;
             this.label9.Text = "KONU DAĞILIMI";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(197, 266);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 52);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "9";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(473, 266);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 52);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "9";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(747, 266);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 52);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "9";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label15.Location = new System.Drawing.Point(26, 506);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(205, 30);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "7 Mayıs Cumartesi | 2022";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Bebas Neue", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label16.Location = new System.Drawing.Point(336, 390);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(277, 122);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "%97,99";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label17.Location = new System.Drawing.Point(26, 117);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 30);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "HARCANAN SÜRE";
-            // 
             // Istatistik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -356,11 +462,11 @@ namespace SigmaSinavSistemi
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private System.Windows.Forms.TabPage tab_sonuc;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_basari;
+        private System.Windows.Forms.Label lbl_tarih;
+        private System.Windows.Forms.Label lbl_bos;
+        private System.Windows.Forms.Label lbl_yanlis;
+        private System.Windows.Forms.Label lbl_dogru;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Label label8;
@@ -375,5 +481,12 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_harcananSure;
+        private System.Windows.Forms.Label lbl_sigmaSoru;
+        private System.Windows.Forms.Label lbl_sinavSure;
+        private System.Windows.Forms.Label lbl_cozulenSoru;
+        private System.Windows.Forms.Label lbl_toplamSoru;
+        private System.Windows.Forms.Button btn_yazdir;
+        private System.Windows.Forms.Button button3;
     }
 }

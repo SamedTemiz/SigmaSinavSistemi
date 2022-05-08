@@ -14,9 +14,10 @@ namespace SigmaSinavSistemi
     {
         SoruHavuzu sorular = new SoruHavuzu();
         Sigma sigma = new Sigma();
+        Sonuclar sonuc = new Sonuclar();
         DateTime target;
-        TimeSpan count = TimeSpan.FromMinutes(10);//Sınav süresi *dakika
-        int NO = 1;
+        TimeSpan count = TimeSpan.FromMinutes(Sorumlu.Sure);//Sınav süresi *dakika
+        int NO = 1, sure;
         public Sinav()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace SigmaSinavSistemi
             radio_Bos.Checked = true;
             target = DateTime.Now.Add(count);
             timer1.Start();
-            
+            Sonuclar.toplamSoru = sorular.soruSayi;
             //--------------------------------------------------------------------------------------
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
@@ -138,7 +139,10 @@ namespace SigmaSinavSistemi
             if (bitir == DialogResult.Yes)
             {
                 timer1.Stop();
-                MessageBox.Show(sigma.SinaviBitir(sorular.sinav_soru));
+                int dakika = (Sorumlu.Sure - int.Parse(lbl_sure.Text.Substring(3, 2))) - 1;
+                int saniye = 60 - int.Parse(lbl_sure.Text.Substring(6, 2));
+                Sonuclar.harcanan_sure = string.Format("{0} dakika {1} saniye", dakika, saniye);
+                MessageBox.Show(sonuc.SinaviBitir(sorular.sinav_soru));
                 Anasayfa a = new Anasayfa();
                 this.Close();
                 a.Show();
@@ -192,7 +196,7 @@ namespace SigmaSinavSistemi
             {
                 lbl_sure.Text = "00:00:00";
                 timer1.Stop();
-                sigma.SinaviBitir(sorular.sinav_soru);
+                sonuc.SinaviBitir(sorular.sinav_soru);
                 MessageBox.Show("Süreniz dolmuştur! \nSınav sonlandırılıyor...");
                 this.Close();
                 Anasayfa a = new Anasayfa();
