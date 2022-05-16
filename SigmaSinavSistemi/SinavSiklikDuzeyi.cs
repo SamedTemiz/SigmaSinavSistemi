@@ -62,5 +62,10 @@ namespace SigmaSinavSistemi
             }
 
         }
+
+        private void btn_cikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

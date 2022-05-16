@@ -39,6 +39,7 @@ namespace SigmaSinavSistemi
             this.lbl_kulad = new System.Windows.Forms.Label();
             this.btn_show = new System.Windows.Forms.Button();
             this.btn_hide = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_sifre
@@ -46,19 +47,18 @@ namespace SigmaSinavSistemi
             this.lbl_sifre.AutoSize = true;
             this.lbl_sifre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_sifre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_sifre.Location = new System.Drawing.Point(40, 46);
+            this.lbl_sifre.Location = new System.Drawing.Point(41, 74);
             this.lbl_sifre.Name = "lbl_sifre";
-            this.lbl_sifre.Size = new System.Drawing.Size(63, 15);
+            this.lbl_sifre.Size = new System.Drawing.Size(78, 20);
             this.lbl_sifre.TabIndex = 0;
             this.lbl_sifre.Text = "Yeni Şifre:";
             // 
             // btn_sifreguncelle
             // 
             this.btn_sifreguncelle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_sifreguncelle.Location = new System.Drawing.Point(129, 93);
-            this.btn_sifreguncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_sifreguncelle.Location = new System.Drawing.Point(142, 137);
             this.btn_sifreguncelle.Name = "btn_sifreguncelle";
-            this.btn_sifreguncelle.Size = new System.Drawing.Size(82, 22);
+            this.btn_sifreguncelle.Size = new System.Drawing.Size(94, 29);
             this.btn_sifreguncelle.TabIndex = 1;
             this.btn_sifreguncelle.Text = "Güncelle";
             this.btn_sifreguncelle.UseVisualStyleBackColor = true;
@@ -69,39 +69,36 @@ namespace SigmaSinavSistemi
             this.lbl_sifreonay.AutoSize = true;
             this.lbl_sifreonay.BackColor = System.Drawing.Color.Transparent;
             this.lbl_sifreonay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_sifreonay.Location = new System.Drawing.Point(34, 71);
+            this.lbl_sifreonay.Location = new System.Drawing.Point(34, 108);
             this.lbl_sifreonay.Name = "lbl_sifreonay";
-            this.lbl_sifreonay.Size = new System.Drawing.Size(68, 15);
+            this.lbl_sifreonay.Size = new System.Drawing.Size(85, 20);
             this.lbl_sifreonay.TabIndex = 0;
             this.lbl_sifreonay.Text = "Şifre Onay:";
             // 
             // txt_yenisifre
             // 
-            this.txt_yenisifre.Location = new System.Drawing.Point(117, 44);
-            this.txt_yenisifre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_yenisifre.Location = new System.Drawing.Point(129, 72);
             this.txt_yenisifre.Name = "txt_yenisifre";
             this.txt_yenisifre.PasswordChar = '*';
             this.txt_yenisifre.PlaceholderText = "Yeni Şifre";
-            this.txt_yenisifre.Size = new System.Drawing.Size(140, 23);
+            this.txt_yenisifre.Size = new System.Drawing.Size(159, 27);
             this.txt_yenisifre.TabIndex = 2;
             // 
             // txt_yenisifreonay
             // 
-            this.txt_yenisifreonay.Location = new System.Drawing.Point(117, 68);
-            this.txt_yenisifreonay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_yenisifreonay.Location = new System.Drawing.Point(129, 104);
             this.txt_yenisifreonay.Name = "txt_yenisifreonay";
             this.txt_yenisifreonay.PasswordChar = '*';
             this.txt_yenisifreonay.PlaceholderText = "Şifre Onay";
-            this.txt_yenisifreonay.Size = new System.Drawing.Size(140, 23);
+            this.txt_yenisifreonay.Size = new System.Drawing.Size(159, 27);
             this.txt_yenisifreonay.TabIndex = 2;
             // 
             // txt_kulad
             // 
-            this.txt_kulad.Location = new System.Drawing.Point(117, 19);
-            this.txt_kulad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_kulad.Location = new System.Drawing.Point(129, 38);
             this.txt_kulad.Name = "txt_kulad";
             this.txt_kulad.PlaceholderText = "Kullanıcı Adı";
-            this.txt_kulad.Size = new System.Drawing.Size(140, 23);
+            this.txt_kulad.Size = new System.Drawing.Size(159, 27);
             this.txt_kulad.TabIndex = 4;
             // 
             // lbl_kulad
@@ -109,9 +106,9 @@ namespace SigmaSinavSistemi
             this.lbl_kulad.AutoSize = true;
             this.lbl_kulad.BackColor = System.Drawing.Color.Transparent;
             this.lbl_kulad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_kulad.Location = new System.Drawing.Point(21, 22);
+            this.lbl_kulad.Location = new System.Drawing.Point(19, 42);
             this.lbl_kulad.Name = "lbl_kulad";
-            this.lbl_kulad.Size = new System.Drawing.Size(77, 15);
+            this.lbl_kulad.Size = new System.Drawing.Size(100, 20);
             this.lbl_kulad.TabIndex = 3;
             this.lbl_kulad.Text = "Kullanıcı Adı:";
             // 
@@ -120,9 +117,10 @@ namespace SigmaSinavSistemi
             this.btn_show.BackColor = System.Drawing.Color.White;
             this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_show.Image = ((System.Drawing.Image)(resources.GetObject("btn_show.Image")));
-            this.btn_show.Location = new System.Drawing.Point(228, 44);
+            this.btn_show.Location = new System.Drawing.Point(256, 72);
+            this.btn_show.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(28, 20);
+            this.btn_show.Size = new System.Drawing.Size(32, 27);
             this.btn_show.TabIndex = 14;
             this.btn_show.UseVisualStyleBackColor = false;
             this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
@@ -132,19 +130,34 @@ namespace SigmaSinavSistemi
             this.btn_hide.BackColor = System.Drawing.Color.White;
             this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hide.Image = ((System.Drawing.Image)(resources.GetObject("btn_hide.Image")));
-            this.btn_hide.Location = new System.Drawing.Point(228, 44);
+            this.btn_hide.Location = new System.Drawing.Point(256, 72);
+            this.btn_hide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(28, 20);
+            this.btn_hide.Size = new System.Drawing.Size(32, 27);
             this.btn_hide.TabIndex = 15;
             this.btn_hide.UseVisualStyleBackColor = false;
             this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cikis.BackgroundImage")));
+            this.btn_cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cikis.Location = new System.Drawing.Point(290, -1);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(30, 30);
+            this.btn_cikis.TabIndex = 79;
+            this.btn_cikis.UseVisualStyleBackColor = false;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // SifreGuncelleme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(280, 142);
+            this.ClientSize = new System.Drawing.Size(320, 189);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_show);
             this.Controls.Add(this.btn_hide);
             this.Controls.Add(this.txt_kulad);
@@ -155,7 +168,6 @@ namespace SigmaSinavSistemi
             this.Controls.Add(this.lbl_sifre);
             this.Controls.Add(this.txt_yenisifre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SifreGuncelleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SifreDogrula";
@@ -175,5 +187,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Label lbl_kulad;
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.Button btn_hide;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }

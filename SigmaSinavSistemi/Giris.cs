@@ -111,5 +111,10 @@ namespace SigmaSinavSistemi
                 txt_sifre.PasswordChar = '*';
             }
         }
+
+        private void btn_cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -29,11 +29,13 @@ namespace SigmaSinavSistemi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinavSiklikDuzeyi));
             this.radio_Az = new System.Windows.Forms.RadioButton();
             this.radio_Cok = new System.Windows.Forms.RadioButton();
             this.radio_Orta = new System.Windows.Forms.RadioButton();
             this.group_SoruDuzey = new System.Windows.Forms.GroupBox();
             this.btn_Gonder = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             this.group_SoruDuzey.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,10 +71,11 @@ namespace SigmaSinavSistemi
             // 
             // group_SoruDuzey
             // 
+            this.group_SoruDuzey.BackColor = System.Drawing.Color.Transparent;
             this.group_SoruDuzey.Controls.Add(this.radio_Orta);
             this.group_SoruDuzey.Controls.Add(this.radio_Cok);
             this.group_SoruDuzey.Controls.Add(this.radio_Az);
-            this.group_SoruDuzey.Location = new System.Drawing.Point(22, 22);
+            this.group_SoruDuzey.Location = new System.Drawing.Point(32, 29);
             this.group_SoruDuzey.Name = "group_SoruDuzey";
             this.group_SoruDuzey.Size = new System.Drawing.Size(175, 125);
             this.group_SoruDuzey.TabIndex = 1;
@@ -81,7 +84,7 @@ namespace SigmaSinavSistemi
             // 
             // btn_Gonder
             // 
-            this.btn_Gonder.Location = new System.Drawing.Point(59, 164);
+            this.btn_Gonder.Location = new System.Drawing.Point(69, 171);
             this.btn_Gonder.Name = "btn_Gonder";
             this.btn_Gonder.Size = new System.Drawing.Size(94, 29);
             this.btn_Gonder.TabIndex = 2;
@@ -89,11 +92,26 @@ namespace SigmaSinavSistemi
             this.btn_Gonder.UseVisualStyleBackColor = true;
             this.btn_Gonder.Click += new System.EventHandler(this.btn_Gonder_Click);
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cikis.BackgroundImage")));
+            this.btn_cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cikis.Location = new System.Drawing.Point(203, 6);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(30, 30);
+            this.btn_cikis.TabIndex = 80;
+            this.btn_cikis.UseVisualStyleBackColor = false;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // SinavSiklikDuzeyi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 228);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(240, 230);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_Gonder);
             this.Controls.Add(this.group_SoruDuzey);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -113,5 +131,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.RadioButton radio_Orta;
         private System.Windows.Forms.GroupBox group_SoruDuzey;
         private System.Windows.Forms.Button btn_Gonder;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }

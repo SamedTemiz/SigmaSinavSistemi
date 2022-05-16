@@ -54,9 +54,10 @@ namespace SigmaSinavSistemi
             // btn_bitir
             // 
             this.btn_bitir.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_bitir.Location = new System.Drawing.Point(882, 532);
+            this.btn_bitir.Location = new System.Drawing.Point(1008, 709);
+            this.btn_bitir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_bitir.Name = "btn_bitir";
-            this.btn_bitir.Size = new System.Drawing.Size(140, 40);
+            this.btn_bitir.Size = new System.Drawing.Size(160, 53);
             this.btn_bitir.TabIndex = 0;
             this.btn_bitir.Text = "SINAVI BİTİR";
             this.btn_bitir.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@ namespace SigmaSinavSistemi
             // btn_cizim
             // 
             this.btn_cizim.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_cizim.Location = new System.Drawing.Point(28, 532);
+            this.btn_cizim.Location = new System.Drawing.Point(32, 709);
+            this.btn_cizim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_cizim.Name = "btn_cizim";
-            this.btn_cizim.Size = new System.Drawing.Size(140, 40);
+            this.btn_cizim.Size = new System.Drawing.Size(160, 53);
             this.btn_cizim.TabIndex = 2;
             this.btn_cizim.Text = "ÇİZİM YAP";
             this.btn_cizim.UseVisualStyleBackColor = true;
@@ -76,9 +78,10 @@ namespace SigmaSinavSistemi
             // btn_onceki
             // 
             this.btn_onceki.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_onceki.Location = new System.Drawing.Point(151, 441);
+            this.btn_onceki.Location = new System.Drawing.Point(173, 588);
+            this.btn_onceki.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_onceki.Name = "btn_onceki";
-            this.btn_onceki.Size = new System.Drawing.Size(100, 32);
+            this.btn_onceki.Size = new System.Drawing.Size(114, 43);
             this.btn_onceki.TabIndex = 3;
             this.btn_onceki.Text = "ÖNCEKİ";
             this.btn_onceki.UseVisualStyleBackColor = true;
@@ -86,9 +89,10 @@ namespace SigmaSinavSistemi
             // 
             // pic_soru
             // 
-            this.pic_soru.Location = new System.Drawing.Point(151, 85);
+            this.pic_soru.Location = new System.Drawing.Point(173, 113);
+            this.pic_soru.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pic_soru.Name = "pic_soru";
-            this.pic_soru.Size = new System.Drawing.Size(750, 350);
+            this.pic_soru.Size = new System.Drawing.Size(857, 467);
             this.pic_soru.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_soru.TabIndex = 4;
             this.pic_soru.TabStop = false;
@@ -96,9 +100,10 @@ namespace SigmaSinavSistemi
             // btn_sonraki
             // 
             this.btn_sonraki.Font = new System.Drawing.Font("Bebas Neue", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_sonraki.Location = new System.Drawing.Point(801, 441);
+            this.btn_sonraki.Location = new System.Drawing.Point(915, 588);
+            this.btn_sonraki.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_sonraki.Name = "btn_sonraki";
-            this.btn_sonraki.Size = new System.Drawing.Size(100, 33);
+            this.btn_sonraki.Size = new System.Drawing.Size(114, 44);
             this.btn_sonraki.TabIndex = 5;
             this.btn_sonraki.Text = "SONRAKİ";
             this.btn_sonraki.UseVisualStyleBackColor = true;
@@ -109,9 +114,9 @@ namespace SigmaSinavSistemi
             this.lbl_konu.AutoSize = true;
             this.lbl_konu.BackColor = System.Drawing.Color.Transparent;
             this.lbl_konu.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_konu.Location = new System.Drawing.Point(151, 51);
+            this.lbl_konu.Location = new System.Drawing.Point(173, 68);
             this.lbl_konu.Name = "lbl_konu";
-            this.lbl_konu.Size = new System.Drawing.Size(82, 31);
+            this.lbl_konu.Size = new System.Drawing.Size(100, 38);
             this.lbl_konu.TabIndex = 6;
             this.lbl_konu.Text = "KONULAR";
             // 
@@ -120,9 +125,9 @@ namespace SigmaSinavSistemi
             this.lbl_soruno.AutoSize = true;
             this.lbl_soruno.BackColor = System.Drawing.Color.Transparent;
             this.lbl_soruno.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_soruno.Location = new System.Drawing.Point(843, 51);
+            this.lbl_soruno.Location = new System.Drawing.Point(963, 68);
             this.lbl_soruno.Name = "lbl_soruno";
-            this.lbl_soruno.Size = new System.Drawing.Size(58, 30);
+            this.lbl_soruno.Size = new System.Drawing.Size(76, 38);
             this.lbl_soruno.TabIndex = 7;
             this.lbl_soruno.Text = "10/10";
             // 
@@ -135,9 +140,9 @@ namespace SigmaSinavSistemi
             this.lbl_sure.AutoSize = true;
             this.lbl_sure.BackColor = System.Drawing.Color.Transparent;
             this.lbl_sure.Font = new System.Drawing.Font("Bebas Neue", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_sure.Location = new System.Drawing.Point(458, 520);
+            this.lbl_sure.Location = new System.Drawing.Point(523, 693);
             this.lbl_sure.Name = "lbl_sure";
-            this.lbl_sure.Size = new System.Drawing.Size(134, 52);
+            this.lbl_sure.Size = new System.Drawing.Size(166, 66);
             this.lbl_sure.TabIndex = 8;
             this.lbl_sure.Text = "00:00:00";
             // 
@@ -147,9 +152,9 @@ namespace SigmaSinavSistemi
             this.lbl_tarih.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tarih.Font = new System.Drawing.Font("Bebas Neue", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_tarih.ForeColor = System.Drawing.Color.White;
-            this.lbl_tarih.Location = new System.Drawing.Point(25, 2);
+            this.lbl_tarih.Location = new System.Drawing.Point(29, 3);
             this.lbl_tarih.Name = "lbl_tarih";
-            this.lbl_tarih.Size = new System.Drawing.Size(184, 23);
+            this.lbl_tarih.Size = new System.Drawing.Size(229, 29);
             this.lbl_tarih.TabIndex = 9;
             this.lbl_tarih.Text = "30 Ağustos Cumartesi | 2022";
             // 
@@ -158,9 +163,10 @@ namespace SigmaSinavSistemi
             this.radio_A.AutoSize = true;
             this.radio_A.BackColor = System.Drawing.Color.Transparent;
             this.radio_A.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_A.Location = new System.Drawing.Point(291, 442);
+            this.radio_A.Location = new System.Drawing.Point(333, 589);
+            this.radio_A.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_A.Name = "radio_A";
-            this.radio_A.Size = new System.Drawing.Size(44, 32);
+            this.radio_A.Size = new System.Drawing.Size(54, 39);
             this.radio_A.TabIndex = 10;
             this.radio_A.TabStop = true;
             this.radio_A.Text = "A";
@@ -172,9 +178,10 @@ namespace SigmaSinavSistemi
             this.radio_B.AutoSize = true;
             this.radio_B.BackColor = System.Drawing.Color.Transparent;
             this.radio_B.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_B.Location = new System.Drawing.Point(375, 442);
+            this.radio_B.Location = new System.Drawing.Point(429, 589);
+            this.radio_B.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_B.Name = "radio_B";
-            this.radio_B.Size = new System.Drawing.Size(43, 32);
+            this.radio_B.Size = new System.Drawing.Size(52, 39);
             this.radio_B.TabIndex = 11;
             this.radio_B.TabStop = true;
             this.radio_B.Text = "B";
@@ -186,9 +193,10 @@ namespace SigmaSinavSistemi
             this.radio_C.AutoSize = true;
             this.radio_C.BackColor = System.Drawing.Color.Transparent;
             this.radio_C.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_C.Location = new System.Drawing.Point(458, 442);
+            this.radio_C.Location = new System.Drawing.Point(523, 589);
+            this.radio_C.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_C.Name = "radio_C";
-            this.radio_C.Size = new System.Drawing.Size(42, 32);
+            this.radio_C.Size = new System.Drawing.Size(52, 39);
             this.radio_C.TabIndex = 12;
             this.radio_C.TabStop = true;
             this.radio_C.Text = "C";
@@ -200,9 +208,10 @@ namespace SigmaSinavSistemi
             this.radio_D.AutoSize = true;
             this.radio_D.BackColor = System.Drawing.Color.Transparent;
             this.radio_D.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_D.Location = new System.Drawing.Point(540, 442);
+            this.radio_D.Location = new System.Drawing.Point(617, 589);
+            this.radio_D.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_D.Name = "radio_D";
-            this.radio_D.Size = new System.Drawing.Size(45, 32);
+            this.radio_D.Size = new System.Drawing.Size(54, 39);
             this.radio_D.TabIndex = 13;
             this.radio_D.TabStop = true;
             this.radio_D.Text = "D";
@@ -214,9 +223,10 @@ namespace SigmaSinavSistemi
             this.radio_E.AutoSize = true;
             this.radio_E.BackColor = System.Drawing.Color.Transparent;
             this.radio_E.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_E.Location = new System.Drawing.Point(625, 442);
+            this.radio_E.Location = new System.Drawing.Point(714, 589);
+            this.radio_E.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_E.Name = "radio_E";
-            this.radio_E.Size = new System.Drawing.Size(41, 32);
+            this.radio_E.Size = new System.Drawing.Size(49, 39);
             this.radio_E.TabIndex = 14;
             this.radio_E.TabStop = true;
             this.radio_E.Text = "E";
@@ -228,9 +238,10 @@ namespace SigmaSinavSistemi
             this.radio_Bos.AutoSize = true;
             this.radio_Bos.BackColor = System.Drawing.Color.Transparent;
             this.radio_Bos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radio_Bos.Location = new System.Drawing.Point(706, 442);
+            this.radio_Bos.Location = new System.Drawing.Point(807, 589);
+            this.radio_Bos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio_Bos.Name = "radio_Bos";
-            this.radio_Bos.Size = new System.Drawing.Size(69, 32);
+            this.radio_Bos.Size = new System.Drawing.Size(85, 39);
             this.radio_Bos.TabIndex = 15;
             this.radio_Bos.TabStop = true;
             this.radio_Bos.Text = "BOŞ";
@@ -242,9 +253,10 @@ namespace SigmaSinavSistemi
             this.btn_close.FlatAppearance.BorderSize = 0;
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_close.Location = new System.Drawing.Point(1023, 2);
+            this.btn_close.Location = new System.Drawing.Point(1169, 3);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(25, 25);
+            this.btn_close.Size = new System.Drawing.Size(29, 33);
             this.btn_close.TabIndex = 16;
             this.btn_close.Text = "X";
             this.btn_close.UseVisualStyleBackColor = true;
@@ -252,10 +264,11 @@ namespace SigmaSinavSistemi
             // 
             // Sinav
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.radio_Bos);
             this.Controls.Add(this.radio_E);
@@ -273,6 +286,7 @@ namespace SigmaSinavSistemi
             this.Controls.Add(this.btn_cizim);
             this.Controls.Add(this.btn_bitir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Sinav";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sinav";
