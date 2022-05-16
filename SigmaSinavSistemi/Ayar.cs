@@ -11,8 +11,7 @@ namespace SigmaSinavSistemi
         {
             Baglan();
         }
-        DateTime HatirlatmaTar, GuncelTar;
-        int derece;
+        
         public bool SinavDuzey(int secim)
         {
             conn.Open();
@@ -43,7 +42,7 @@ namespace SigmaSinavSistemi
                     }
                     else if (secim == 2)
                     {
-                        switch (derece)
+                        switch (x.Derece)
                         {
                             case 2:
                                 cmd = new SqlCommand("UPDATE Sigma SET HatirlatmaTarih=DATEADD(day, -1, HatirlatmaTarih) WHERE SoruId = '" + x.SoruId + "' ", conn);
@@ -61,7 +60,7 @@ namespace SigmaSinavSistemi
                     }
                     else if (secim == 3)
                     {
-                        switch (derece)
+                        switch (x.Derece)
                         {
                             case 2:
                                 cmd = new SqlCommand("UPDATE Sigma SET HatirlatmaTarih=DATEADD(day, -3, HatirlatmaTarih) WHERE SoruId = '" + x.SoruId + "' ", conn);
