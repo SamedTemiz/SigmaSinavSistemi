@@ -114,5 +114,52 @@ namespace SigmaSinavSistemi
             conn.Close();
             return kontol;
         }
+        public bool KullaniciGuncelle(int id, string kulad, string ad, string soyad, string mail, string sifre, int kul_tip)
+        {
+            bool kontrol = false;
+            cmd = new SqlCommand("UPDATE Kullanicilar SET KullaniciAd='" + kulad + "',Ad='" + ad + "',Soyad='" + soyad + "',Mail='" + mail + "',Sifre='" + sifre + "',KullaniciTipID='" + kul_tip + "' WHERE Id='" + id + "'", conn);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() != -1)
+            {
+                kontrol = true;
+            }
+            conn.Close();
+            return kontrol;
+        }
+        public bool KullaniciSil(int Id)
+        {
+            bool kontrol = false;
+            cmd = new SqlCommand("DELETE FROM Kullanicilar WHERE Id = '" + Id + "'", conn);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() != -1)
+            {
+                kontrol = true;
+            }
+            conn.Close();
+            return kontrol;
+        }
+        public List<Kullanici> KulListeleA()
+        {
+            List<Kullanici> kullanicilist = new List<Kullanici>();
+            conn.Open();
+            cmd = new SqlCommand("SELECT * From Kullanicilar", conn);
+
+            SqlDataReader oku = cmd.ExecuteReader();
+            while (oku.Read())
+            {
+                Kullanici kullanici = new Kullanici();
+                kullanici.Id = int.Parse(oku[0].ToString());
+                kullanici.KullaniciAd = oku[1].ToString();
+                kullanici.Ad = oku[2].ToString();
+                kullanici.Soyad = oku[3].ToString();
+                kullanici.Mail = oku[4].ToString();
+                kullanici.Sifre = oku[5].ToString();
+                kullanici.KullaniciTipID = int.Parse(oku[6].ToString());
+
+                kullanicilist.Add(kullanici);
+            }
+            conn.Close();
+            return kullanicilist;
+        }
     }
 }
