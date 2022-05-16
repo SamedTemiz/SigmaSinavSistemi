@@ -67,10 +67,10 @@ namespace SigmaSinavSistemi
             }
             sinav_soru = new int[soruSayi + 1, 3]; //matris oluşturuyoruz
 
-            int miktar = Listele(0).FindAll(x => (x.Derece == 0) && (x.Basari == 0)).Count;//Derecesi 0 olanların miktarı
+            int miktar = Listele(0).FindAll(x => (x.Derece == 0) && (x.Basari == 0) && (x.Onay == true)).Count;//Derecesi 0 olanların miktarı
             int[] soruID = new int[miktar];//soru havuzundan soru id leri için dizi
             int a = 0;
-            foreach (var x in Listele(0).FindAll(x => x.Derece == 0))
+            foreach (var x in Listele(0).FindAll(x => (x.Derece == 0) && (x.Onay == true)))
             {
                 soruID[a] = x.Id;//Derecesi 0 olanların id si
                 a++;

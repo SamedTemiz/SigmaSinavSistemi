@@ -243,7 +243,7 @@ namespace SigmaSinavSistemi
             cmbkonu.Text = datasorularadmin.CurrentRow.Cells[2].Value.ToString();
             cmbseviye.Text = datasorularadmin.CurrentRow.Cells[4].Value.ToString();
             cmbdcevap.Text = datasorularadmin.CurrentRow.Cells[5].Value.ToString();
-            cmbonay.Text = datasorularadmin.CurrentRow.Cells[8].Value.ToString();
+            cmbonay.Text = datasorularadmin.CurrentRow.Cells[7].Value.ToString();
         }
 
         private void datasorularadmin_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
