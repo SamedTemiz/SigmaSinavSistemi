@@ -35,6 +35,7 @@ namespace SigmaSinavSistemi
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_close = new System.Windows.Forms.Button();
             this.lbl_Tarih = new System.Windows.Forms.Label();
             this.btn_Gonder = new System.Windows.Forms.Button();
             this.lbl_dogru = new System.Windows.Forms.Label();
@@ -63,7 +64,7 @@ namespace SigmaSinavSistemi
             this.btn_Sil = new System.Windows.Forms.Button();
             this.btn_Guncelle = new System.Windows.Forms.Button();
             this.data_Sorular = new MetroFramework.Controls.MetroGrid();
-            this.btn_close = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_soru)).BeginInit();
@@ -75,6 +76,7 @@ namespace SigmaSinavSistemi
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,8 +106,22 @@ namespace SigmaSinavSistemi
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(911, 422);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Soru Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.White;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_close.Location = new System.Drawing.Point(884, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(25, 25);
+            this.btn_close.TabIndex = 17;
+            this.btn_close.Text = "X";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // lbl_Tarih
             // 
@@ -270,7 +286,7 @@ namespace SigmaSinavSistemi
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Size = new System.Drawing.Size(911, 422);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Tüm Sorular";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txt_sorusay
@@ -522,19 +538,14 @@ namespace SigmaSinavSistemi
             this.data_Sorular.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Sorular_CellDoubleClick);
             this.data_Sorular.SelectionChanged += new System.EventHandler(this.data_Sorular_SelectionChanged);
             // 
-            // btn_close
+            // tabPage3
             // 
-            this.btn_close.BackColor = System.Drawing.Color.White;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_close.Location = new System.Drawing.Point(884, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(25, 25);
-            this.btn_close.TabIndex = 17;
-            this.btn_close.Text = "X";
-            this.btn_close.UseVisualStyleBackColor = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(911, 422);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Sınav Ayarları";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Sorumlu
             // 
@@ -591,5 +602,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.TextBox txt_sorusay;
         private System.Windows.Forms.Label lbl_sorusay;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

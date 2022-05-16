@@ -16,16 +16,16 @@ namespace SigmaSinavSistemi
         SoruHavuzu sorular = new SoruHavuzu();
         Sigma sigma = new Sigma();
         Sonuclar sonuc = new Sonuclar();
-
+        KonuIstatistik konu = new KonuIstatistik();
         public Istatistik()
         {
             InitializeComponent();
             lbl_tarih.Text = DateTime.Now.ToString("dd MMMM dddd | yyyy");//Günün tarihini yazdırıyoruz
-
+            bar_ilerleme.ForeColor = Color.Red;
             data_sonuclistesi.DataSource = sonuc.SonucListele();
             int satir = data_sonuclistesi.Rows.Count;
+            combo_konular.SelectedIndex = 0;
             //Bilgiler();
-
             //--------------------------------------------------------------------------------------
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
@@ -60,7 +60,23 @@ namespace SigmaSinavSistemi
             a.Show();
             this.Close();
         }
+        public void Yazdir()
+        {
+            Panel panel = new Panel();
+            this.Controls.Add(panel);
 
+            Graphics graphics = panel.CreateGraphics();
+            Size size = this.metroTabControl1.ClientSize;
+            bitmap = new Bitmap(size.Width, size.Height, graphics);
+
+            graphics = Graphics.FromImage(bitmap);
+
+            Point point = PointToScreen(panel.Location);
+            graphics.CopyFromScreen(point.X, point.Y, 0, 0, size);
+
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
         private void SinavSecimi(object sender, EventArgs e)
         {
             int toplam, cozulen, dogru, yanlis, bos, sigma;
@@ -88,7 +104,6 @@ namespace SigmaSinavSistemi
             lbl_basari.Text = string.Format("%{0}", data_sonuclistesi.CurrentRow.Cells[7].Value.ToString());
             lbl_sinavTarih.Text = tarih.ToString("dd MMMM dddd | yyyy");
         }
-
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bitmap, 0, 0);
@@ -96,20 +111,45 @@ namespace SigmaSinavSistemi
         Bitmap bitmap;
         private void btn_yazdir_Click(object sender, EventArgs e)
         {
-            Panel panel = new Panel();
-            this.Controls.Add(panel);
-
-            Graphics graphics = panel.CreateGraphics();
-            Size size = this.ClientSize;
-            bitmap = new Bitmap(size.Width, size.Height, graphics);
-
-            graphics = Graphics.FromImage(bitmap);
-
-            Point point = PointToScreen(panel.Location);
-            graphics.CopyFromScreen(point.X, point.Y, 0, 0, size);
-
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            Yazdir();
         }
+        private void btn_yazdir2_Click(object sender, EventArgs e)
+        {
+            Yazdir();
+        }
+        public void KonuyaGore(int konuID)
+        {
+            var veri = konu.Istatistik().Find(x => x.Konu_ID == konuID);
+
+            int soruSayisi, dereceli, dogru, yanlis, k_puan, a_puan;
+            double basari, ilerleme;
+            
+            soruSayisi = int.Parse(veri.SoruSayisi.ToString());
+            dereceli = int.Parse(veri.Dereceli.ToString());
+            dogru = int.Parse(veri.Dogru.ToString());
+            yanlis = int.Parse(veri.Yanlis.ToString());
+            k_puan = int.Parse(veri.KonuPuan.ToString());
+            a_puan = int.Parse(veri.AlinanPuan.ToString());
+
+            lbl_soruSayisi.Text = soruSayisi.ToString();
+            lbl_dereceli.Text = dereceli.ToString();
+            lbl_konuDogru.Text = dogru.ToString();
+            lbl_konuYanlis.Text = yanlis.ToString();
+            lbl_konuPuan.Text = k_puan.ToString();
+            lbl_alinanPuan.Text = a_puan.ToString();
+
+            basari = (a_puan * 100) / k_puan;
+            ilerleme = (dogru * a_puan * 100) / (soruSayisi * k_puan); 
+            lbl_basariOran.Text = string.Format("%{0}", basari);
+            spin_basari.Value = (int)basari;
+            lbl_ilerleme.Text = string.Format("%{0}", ilerleme);
+            bar_ilerleme.Value = (int)ilerleme;
+        }
+
+        private void combo_konular_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            KonuyaGore(combo_konular.SelectedIndex + 1);
+        }
+
     }
 }

@@ -10,7 +10,6 @@ namespace SigmaSinavSistemi
         {
             Baglan();
         }
-        //internal olanlar public ti
         public int Id { get; set; }
         public int KonuId { get; set; }
         public string KonuAdi { get; set; }
@@ -101,6 +100,7 @@ namespace SigmaSinavSistemi
             }
             return sinav;
         }
+
         //SORUMLU SAYFASI
         public string SoruEkle()
         {

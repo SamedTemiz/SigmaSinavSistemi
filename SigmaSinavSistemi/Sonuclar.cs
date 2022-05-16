@@ -22,6 +22,7 @@ namespace SigmaSinavSistemi
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            conn.Close();
             return dt;
         }
         public string SinaviBitir(int[,] sonuc)

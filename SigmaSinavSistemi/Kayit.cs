@@ -28,7 +28,6 @@ namespace SigmaSinavSistemi
             int nHeightEllipse // width of ellipse
         );
         Point lastPoint;
-
         private void btn_kayit_Click(object sender, EventArgs e)
         {
             Kullanici ekle = new Kullanici();
@@ -67,9 +66,7 @@ namespace SigmaSinavSistemi
                     }
                 }
             }
-
         }
-
         private void Kayit_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -82,7 +79,6 @@ namespace SigmaSinavSistemi
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
         private void btn_show_Click(object sender, EventArgs e)
         {
             if (txt_sifre.PasswordChar == '*')
@@ -92,7 +88,6 @@ namespace SigmaSinavSistemi
                 txt_sifreonay.PasswordChar = '\0';
             }
         }
-
         private void btn_hide_Click(object sender, EventArgs e)
         {
             if (txt_sifre.PasswordChar == '\0')
@@ -101,11 +96,6 @@ namespace SigmaSinavSistemi
                 txt_sifre.PasswordChar = '*';
                 txt_sifreonay.PasswordChar = '*';
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -51,7 +51,6 @@ namespace SigmaSinavSistemi
             }
             return kul;
         }
-
         public bool ekleKullanici(Kullanici kul)
         {
             bool result = false;
@@ -67,7 +66,6 @@ namespace SigmaSinavSistemi
             }
             return result;
         }
-
         public bool MailKontrol(string mail)
         {
             bool result = false;
@@ -104,7 +102,6 @@ namespace SigmaSinavSistemi
             conn.Close();
             return kullanicilist;
         }
-
         public bool KullaniciBilgiGuncelle(string kullaniciadi,string ad,string soyad,string mail) 
         {
             bool kontol = false;
