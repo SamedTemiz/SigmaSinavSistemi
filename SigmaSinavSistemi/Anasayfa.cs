@@ -117,5 +117,11 @@ namespace SigmaSinavSistemi
         {
 
         }
+
+        private void sınavSıklıkDüzeyiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SinavSiklikDuzeyi si = new SinavSiklikDuzeyi();
+            si.Show();
+        }
     }
 }

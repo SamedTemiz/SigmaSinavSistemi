@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -11,12 +12,18 @@ namespace SigmaSinavSistemi
 {
     public partial class Sorumlu : Form
     {
-        public static int SoruAdet = 10;//sınav ayarlarında buralar static bir şekilde değişmeli
-        public static int Sure = 10;
+        public static int SoruAdet { get; set; }
+        public static int Sure { get; set; }
+        Database db = new Database();
         SoruHavuzu sorular = new SoruHavuzu();
         public Sorumlu()
         {
+            db.Baglan();
             InitializeComponent();
+            SinavAyar();
+            num_adet.Value = SoruAdet;
+            num_sure.Value = Sure;
+
             lbl_Tarih.Text = DateTime.Now.ToString("dd MMMM dddd | yyyy");
             tabPage1.Text = "Soru Havuzu";
             tabPage2.Text = "Soru Listele";
@@ -50,6 +57,19 @@ namespace SigmaSinavSistemi
             data_Sorular.DataSource = sorular.Listele(0);
             txt_sorusay.Text = sorular.Listele(0).Count.ToString();
         }
+        public void SinavAyar()
+        {
+            db.Baglan();
+            db.cmd = new SqlCommand("SELECT Sure, SoruAdet FROM SinavAyar", db.conn);
+            db.conn.Open();
+            var oku = db.cmd.ExecuteReader();
+            while(oku.Read())
+            {
+                Sure = int.Parse(oku[0].ToString());
+                SoruAdet = int.Parse(oku[1].ToString());
+            }
+            db.conn.Close();
+        }
         private void btn_Gonder_Click(object sender, EventArgs e)
         {
             string imagefile = Path.GetFileName(pic_soru.ImageLocation);
@@ -79,7 +99,6 @@ namespace SigmaSinavSistemi
             }
             SoruListele();
         }
-
         private void btn_gozat_Click(object sender, EventArgs e)
         {
             OpenFileDialog resimsec = new OpenFileDialog();
@@ -91,9 +110,6 @@ namespace SigmaSinavSistemi
             }
             txt_gozat.Text = Path.GetFileName(resimsec.FileName);
         }
-
-
-
         private void btn_Guncelle_Click(object sender, EventArgs e)
         {
             int konuid = cmb_gkonu.SelectedIndex + 1;
@@ -112,7 +128,6 @@ namespace SigmaSinavSistemi
             data_Sorular.ClearSelection();
             SoruListele();
         }
-
         private void btn_Sil_Click(object sender, EventArgs e)
         {
             int Id = int.Parse(data_Sorular.CurrentRow.Cells[0].Value.ToString());
@@ -132,20 +147,15 @@ namespace SigmaSinavSistemi
             data_Sorular.ClearSelection();
             SoruListele();
         }
-
         private void cmb_listeleme_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             data_Sorular.DataSource = sorular.Listele(cmb_listeleme.SelectedIndex + 1);
         }
-
         private void btn_tumunugoster_Click(object sender, EventArgs e)
         {
             cmb_listeleme.Text = "--Seçin--";
             SoruListele();
         }
-
-
         private void data_Sorular_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (data_Sorular.SelectedRows.Count > 1)
@@ -161,7 +171,6 @@ namespace SigmaSinavSistemi
                 cmb_gDogru.Text = data_Sorular.CurrentRow.Cells[5].Value.ToString();
             }
         }
-
         private void data_Sorular_SelectionChanged(object sender, EventArgs e)
         {
             txt_Id.Text = data_Sorular.CurrentRow.Cells[0].Value.ToString();
@@ -169,20 +178,38 @@ namespace SigmaSinavSistemi
             cmb_gseviye.SelectedItem = data_Sorular.CurrentRow.Cells[4].Value.ToString();
             cmb_gDogru.SelectedIndex = int.Parse(data_Sorular.CurrentRow.Cells[5].Value.ToString()) - 1;
         }
-        private void btn_adetonay_Click(object sender, EventArgs e)
-        {
-            //SoruHavuzu.soruSayi = int.Parse(num_adet.Value.ToString());
-        }
-
         private void btn_close_Click(object sender, EventArgs e)
         {
-            DialogResult start = MessageBox.Show("Sınav başlatılsın mı?", "Onayla", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (start == DialogResult.Yes)
+            Application.Exit();
+        }
+        private void btn_onay_Click(object sender, EventArgs e)
+        {
+            int sure = int.Parse(num_sure.Value.ToString());
+            int adet = int.Parse(num_adet.Value.ToString());
+
+            db.cmd = new SqlCommand("UPDATE SinavAyar SET Sure = '" + sure + "', SoruAdet = '" + adet + "' ", db.conn);
+            db.conn.Open();
+            if(db.cmd.ExecuteNonQuery() == 1)
             {
-                Sinav sv = new Sinav();
-                sv.Show();
-                this.Close();
+                MessageBox.Show("İşlem başarılı...");
             }
+            else
+            {
+                MessageBox.Show("HATA!");
+            }
+            db.conn.Close();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Sure.ToString() + " " + SoruAdet.ToString());
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

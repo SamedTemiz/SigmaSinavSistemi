@@ -110,8 +110,8 @@ namespace SigmaSinavSistemi
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.tab_stats);
             this.metroTabControl1.Controls.Add(this.tab_sonuc);
+            this.metroTabControl1.Controls.Add(this.tab_stats);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";

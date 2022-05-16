@@ -30,9 +30,9 @@ namespace SigmaSinavSistemi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sorumlu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_close = new System.Windows.Forms.Button();
@@ -65,11 +65,21 @@ namespace SigmaSinavSistemi
             this.btn_Guncelle = new System.Windows.Forms.Button();
             this.data_Sorular = new MetroFramework.Controls.MetroGrid();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.num_adet = new System.Windows.Forms.NumericUpDown();
+            this.num_sure = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_onay = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_soru)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sorular)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sure)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -115,7 +125,7 @@ namespace SigmaSinavSistemi
             this.btn_close.FlatAppearance.BorderSize = 0;
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_close.Location = new System.Drawing.Point(884, 0);
+            this.btn_close.Location = new System.Drawing.Point(886, 0);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(25, 25);
             this.btn_close.TabIndex = 17;
@@ -264,6 +274,7 @@ namespace SigmaSinavSistemi
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.txt_sorusay);
             this.tabPage2.Controls.Add(this.lbl_sorusay);
             this.tabPage2.Controls.Add(this.txt_Id);
@@ -493,24 +504,24 @@ namespace SigmaSinavSistemi
             this.data_Sorular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_Sorular.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.data_Sorular.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Sorular.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Sorular.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.data_Sorular.ColumnHeadersHeight = 25;
             this.data_Sorular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data_Sorular.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_Sorular.DefaultCellStyle = dataGridViewCellStyle5;
             this.data_Sorular.EnableHeadersVisualStyles = false;
             this.data_Sorular.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.data_Sorular.GridColor = System.Drawing.Color.Silver;
@@ -518,14 +529,14 @@ namespace SigmaSinavSistemi
             this.data_Sorular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data_Sorular.Name = "data_Sorular";
             this.data_Sorular.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Sorular.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Sorular.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.data_Sorular.RowHeadersWidth = 51;
             this.data_Sorular.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.data_Sorular.RowTemplate.Height = 29;
@@ -540,12 +551,107 @@ namespace SigmaSinavSistemi
             // 
             // tabPage3
             // 
+            this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.num_adet);
+            this.tabPage3.Controls.Add(this.num_sure);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.btn_onay);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(911, 422);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Sınav Ayarları";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // num_adet
+            // 
+            this.num_adet.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.num_adet.Location = new System.Drawing.Point(393, 184);
+            this.num_adet.Name = "num_adet";
+            this.num_adet.Size = new System.Drawing.Size(120, 42);
+            this.num_adet.TabIndex = 2;
+            this.num_adet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_adet.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // num_sure
+            // 
+            this.num_sure.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.num_sure.Location = new System.Drawing.Point(393, 108);
+            this.num_sure.Name = "num_sure";
+            this.num_sure.Size = new System.Drawing.Size(120, 42);
+            this.num_sure.TabIndex = 2;
+            this.num_sure.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.num_sure.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(265, 186);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 35);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "SORU SAYISI :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(255, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SINAV SÜRESİ :";
+            // 
+            // btn_onay
+            // 
+            this.btn_onay.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_onay.Location = new System.Drawing.Point(393, 245);
+            this.btn_onay.Name = "btn_onay";
+            this.btn_onay.Size = new System.Drawing.Size(120, 40);
+            this.btn_onay.TabIndex = 0;
+            this.btn_onay.Text = "ONAYLA";
+            this.btn_onay.UseVisualStyleBackColor = true;
+            this.btn_onay.Click += new System.EventHandler(this.btn_onay_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(886, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(886, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 25);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Sorumlu
             // 
@@ -565,6 +671,10 @@ namespace SigmaSinavSistemi
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Sorular)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_adet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_sure)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,5 +713,12 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Label lbl_sorusay;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.NumericUpDown num_adet;
+        private System.Windows.Forms.NumericUpDown num_sure;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_onay;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

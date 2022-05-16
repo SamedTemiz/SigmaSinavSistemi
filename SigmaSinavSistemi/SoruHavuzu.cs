@@ -19,7 +19,7 @@ namespace SigmaSinavSistemi
         public int Derece { get; set; }
         public int Basari { get; set; }
         public int[,] sinav_soru { get; set; }
-        public int soruSayi = Sorumlu.SoruAdet;
+        public int soruSayi;
         public List<SoruHavuzu> Listele(int konuID)
         {
             List<SoruHavuzu> havuz = new List<SoruHavuzu>();
@@ -51,6 +51,9 @@ namespace SigmaSinavSistemi
         //Rastgele 10 soru + var ise dereceli sorular
         public List<SoruHavuzu> SinavSorulari()
         {
+            Sorumlu sorum = new Sorumlu();
+            sorum.SinavAyar();
+            soruSayi = Sorumlu.SoruAdet;
             List<SoruHavuzu> sinav = new List<SoruHavuzu>();
             SoruHavuzu soru = new SoruHavuzu();
             Sigma sigma = new Sigma();

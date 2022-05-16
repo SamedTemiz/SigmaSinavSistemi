@@ -53,7 +53,6 @@ namespace SigmaSinavSistemi
         {
             lastPoint = new Point(e.X, e.Y);
         }
-        
         private void btn_close_Click(object sender, EventArgs e)
         {
             Anasayfa a = new Anasayfa();
@@ -145,11 +144,9 @@ namespace SigmaSinavSistemi
             lbl_ilerleme.Text = string.Format("%{0}", ilerleme);
             bar_ilerleme.Value = (int)ilerleme;
         }
-
         private void combo_konular_SelectedIndexChanged(object sender, EventArgs e)
         {
             KonuyaGore(combo_konular.SelectedIndex + 1);
         }
-
     }
 }

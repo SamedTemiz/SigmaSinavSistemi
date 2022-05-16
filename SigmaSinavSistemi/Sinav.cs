@@ -15,16 +15,18 @@ namespace SigmaSinavSistemi
         SoruHavuzu sorular = new SoruHavuzu();
         Sigma sigma = new Sigma();
         Sonuclar sonuc = new Sonuclar();
+        Sorumlu sorumlu = new Sorumlu();
         DateTime target;
-        TimeSpan count = TimeSpan.FromMinutes(Sorumlu.Sure);//Sınav süresi *dakika
         int NO = 1;
         public Sinav()
         {
             InitializeComponent();
             lbl_tarih.Text = DateTime.Now.ToString("dd MMMM dddd | yyyy");//Günün tarihini yazdırıyoruz
             sorular.SinavSorulari();
+            sorumlu.SinavAyar();
             SoruPaketi(NO);
             radio_Bos.Checked = true;
+            TimeSpan count = TimeSpan.FromMinutes(Sorumlu.Sure);//Sınav süresi *dakika
             target = DateTime.Now.Add(count);
             timer1.Start();
             sonuc.ToplamSoru = sorular.soruSayi;
@@ -51,8 +53,6 @@ namespace SigmaSinavSistemi
             lbl_konu.Text = soru.KonuAdi;
             string imagepath = Path.Combine(Application.StartupPath + "\\soru\\" + soru.GorselAd);
             pic_soru.ImageLocation = imagepath;
-            label1.Text = soru.DogruCevap.ToString();
-            label2.Text = id.ToString();
         }
 
         Point lastPoint;
