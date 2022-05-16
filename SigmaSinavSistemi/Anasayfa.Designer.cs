@@ -1,4 +1,3 @@
-﻿
 namespace SigmaSinavSistemi
 {
     partial class Anasayfa
@@ -145,7 +144,6 @@ namespace SigmaSinavSistemi
             // 
             this.kullanıcıAyarlarıToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kullanıcıAyarlarıToolStripMenuItem.Image")));
             this.kullanıcıAyarlarıToolStripMenuItem.Name = "kullanıcıAyarlarıToolStripMenuItem";
-            this.kullanıcıAyarlarıToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kullanıcıAyarlarıToolStripMenuItem.Text = "Kullanıcı Ayarları";
             this.kullanıcıAyarlarıToolStripMenuItem.Click += new System.EventHandler(this.kullanıcıAyarlarıToolStripMenuItem_Click);
             // 
@@ -153,7 +151,6 @@ namespace SigmaSinavSistemi
             // 
             this.sınavSıklıkDüzeyiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sınavSıklıkDüzeyiToolStripMenuItem.Image")));
             this.sınavSıklıkDüzeyiToolStripMenuItem.Name = "sınavSıklıkDüzeyiToolStripMenuItem";
-            this.sınavSıklıkDüzeyiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sınavSıklıkDüzeyiToolStripMenuItem.Text = "Sınav Sıklık Düzeyi";
             this.sınavSıklıkDüzeyiToolStripMenuItem.Click += new System.EventHandler(this.sınavSıklıkDüzeyiToolStripMenuItem_Click);
             // 
