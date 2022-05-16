@@ -40,6 +40,7 @@ namespace SigmaSinavSistemi
             this.btn_show = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_giris = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,6 +166,19 @@ namespace SigmaSinavSistemi
             this.btn_giris.UseVisualStyleBackColor = true;
             this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click);
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cikis.BackgroundImage")));
+            this.btn_cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cikis.Location = new System.Drawing.Point(994, 56);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(30, 30);
+            this.btn_cikis.TabIndex = 79;
+            this.btn_cikis.UseVisualStyleBackColor = false;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -172,6 +186,7 @@ namespace SigmaSinavSistemi
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.btn_giris);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.btn_show);
@@ -206,5 +221,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Button btn_giris;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }

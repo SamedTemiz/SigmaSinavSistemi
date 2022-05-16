@@ -49,6 +49,7 @@ namespace SigmaSinavSistemi
             this.btn_show = new System.Windows.Forms.Button();
             this.btn_hide = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.btn_cikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,12 +258,26 @@ namespace SigmaSinavSistemi
             this.pic_logo.TabIndex = 14;
             this.pic_logo.TabStop = false;
             // 
+            // btn_cikis
+            // 
+            this.btn_cikis.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cikis.BackgroundImage")));
+            this.btn_cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cikis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_cikis.Location = new System.Drawing.Point(993, 55);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(30, 30);
+            this.btn_cikis.TabIndex = 79;
+            this.btn_cikis.UseVisualStyleBackColor = false;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            // 
             // Kayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.btn_show);
             this.Controls.Add(this.btn_hide);
@@ -316,5 +331,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.Button btn_show;
         private System.Windows.Forms.Button btn_hide;
         private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.Button btn_cikis;
     }
 }

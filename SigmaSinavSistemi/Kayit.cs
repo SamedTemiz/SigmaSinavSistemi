@@ -97,5 +97,10 @@ namespace SigmaSinavSistemi
                 txt_sifreonay.PasswordChar = '*';
             }
         }
+
+        private void btn_cikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
