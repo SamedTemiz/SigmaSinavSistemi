@@ -17,6 +17,7 @@ namespace SigmaSinavSistemi
         public string Seviye { get; set; }
         public int DogruCevap { get; set; }
         public int Derece { get; set; }
+        public bool Onay { get; set; }
         public int Basari { get; set; }
         public int[,] sinav_soru { get; set; }
         public int soruSayi;
@@ -29,7 +30,7 @@ namespace SigmaSinavSistemi
             {
                 kosul = "";
             }
-            cmd = new SqlCommand("SELECT SoruHavuzu.Id, SoruHavuzu.KonuId, Konular.KonuAdi, SoruHavuzu.GorselAd, SoruHavuzu.Seviye, SoruHavuzu.DogruCevap, Sigma.Derece, Sigma.Basari FROM SoruHavuzu INNER JOIN Konular ON SoruHavuzu.KonuId = Konular.KonuId INNER JOIN Sigma ON SoruHavuzu.Id = Sigma.SoruId " + kosul, conn);
+            cmd = new SqlCommand("SELECT SoruHavuzu.Id, SoruHavuzu.KonuId, Konular.KonuAdi, SoruHavuzu.GorselAd, SoruHavuzu.Seviye, SoruHavuzu.DogruCevap, Sigma.Derece, SoruHavuzu.Onay, Sigma.Basari FROM SoruHavuzu INNER JOIN Konular ON SoruHavuzu.KonuId = Konular.KonuId INNER JOIN Sigma ON SoruHavuzu.Id = Sigma.SoruId " + kosul, conn);
             SqlDataReader oku = cmd.ExecuteReader();
             while (oku.Read())
             {
@@ -41,7 +42,8 @@ namespace SigmaSinavSistemi
                 soru.Seviye = oku[4].ToString();
                 soru.DogruCevap = int.Parse(oku[5].ToString());
                 soru.Derece = int.Parse(oku[6].ToString());//Sigma tablosundan
-                soru.Basari = int.Parse(oku[7].ToString());//Sigma tablosundan
+                soru.Onay = bool.Parse(oku[7].ToString());
+                soru.Basari = int.Parse(oku[8].ToString());//Sigma tablosundan
                 havuz.Add(soru);
             }
             conn.Close();
@@ -143,6 +145,18 @@ namespace SigmaSinavSistemi
             }
             conn.Close();
             return kontrol;
+        }
+        public bool GuncelleOnay(int id, int konuid, string seviye, string dogru, int onay)
+        {
+            bool kontol = false;
+            cmd = new SqlCommand("Update SoruHavuzu" + " Set KonuId='" + konuid + "',Seviye='" + seviye + "',DogruCevap='" + dogru + "',Onay='" + onay + "' where Id='" + id + "'", conn);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() != -1)
+            {
+                kontol = true;
+            }
+            conn.Close();
+            return kontol;
         }
     }
 }
