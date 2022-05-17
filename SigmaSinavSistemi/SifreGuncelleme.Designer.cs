@@ -50,7 +50,7 @@ namespace SigmaSinavSistemi
             this.lbl_sifre.Location = new System.Drawing.Point(41, 74);
             this.lbl_sifre.Name = "lbl_sifre";
             this.lbl_sifre.Size = new System.Drawing.Size(78, 20);
-            this.lbl_sifre.TabIndex = 0;
+            this.lbl_sifre.TabIndex = 7;
             this.lbl_sifre.Text = "Yeni Şifre:";
             // 
             // btn_sifreguncelle
@@ -59,7 +59,7 @@ namespace SigmaSinavSistemi
             this.btn_sifreguncelle.Location = new System.Drawing.Point(142, 137);
             this.btn_sifreguncelle.Name = "btn_sifreguncelle";
             this.btn_sifreguncelle.Size = new System.Drawing.Size(94, 29);
-            this.btn_sifreguncelle.TabIndex = 1;
+            this.btn_sifreguncelle.TabIndex = 4;
             this.btn_sifreguncelle.Text = "Güncelle";
             this.btn_sifreguncelle.UseVisualStyleBackColor = true;
             this.btn_sifreguncelle.Click += new System.EventHandler(this.btn_sifreguncelle_Click);
@@ -72,7 +72,7 @@ namespace SigmaSinavSistemi
             this.lbl_sifreonay.Location = new System.Drawing.Point(34, 108);
             this.lbl_sifreonay.Name = "lbl_sifreonay";
             this.lbl_sifreonay.Size = new System.Drawing.Size(85, 20);
-            this.lbl_sifreonay.TabIndex = 0;
+            this.lbl_sifreonay.TabIndex = 8;
             this.lbl_sifreonay.Text = "Şifre Onay:";
             // 
             // txt_yenisifre
@@ -91,7 +91,7 @@ namespace SigmaSinavSistemi
             this.txt_yenisifreonay.PasswordChar = '*';
             this.txt_yenisifreonay.PlaceholderText = "Şifre Onay";
             this.txt_yenisifreonay.Size = new System.Drawing.Size(159, 27);
-            this.txt_yenisifreonay.TabIndex = 2;
+            this.txt_yenisifreonay.TabIndex = 3;
             // 
             // txt_kulad
             // 
@@ -99,7 +99,7 @@ namespace SigmaSinavSistemi
             this.txt_kulad.Name = "txt_kulad";
             this.txt_kulad.PlaceholderText = "Kullanıcı Adı";
             this.txt_kulad.Size = new System.Drawing.Size(159, 27);
-            this.txt_kulad.TabIndex = 4;
+            this.txt_kulad.TabIndex = 1;
             // 
             // lbl_kulad
             // 
@@ -109,7 +109,7 @@ namespace SigmaSinavSistemi
             this.lbl_kulad.Location = new System.Drawing.Point(19, 42);
             this.lbl_kulad.Name = "lbl_kulad";
             this.lbl_kulad.Size = new System.Drawing.Size(100, 20);
-            this.lbl_kulad.TabIndex = 3;
+            this.lbl_kulad.TabIndex = 6;
             this.lbl_kulad.Text = "Kullanıcı Adı:";
             // 
             // btn_show
@@ -147,7 +147,7 @@ namespace SigmaSinavSistemi
             this.btn_cikis.Location = new System.Drawing.Point(290, -1);
             this.btn_cikis.Name = "btn_cikis";
             this.btn_cikis.Size = new System.Drawing.Size(30, 30);
-            this.btn_cikis.TabIndex = 79;
+            this.btn_cikis.TabIndex = 5;
             this.btn_cikis.UseVisualStyleBackColor = false;
             this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
