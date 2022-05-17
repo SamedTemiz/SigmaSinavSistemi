@@ -30,7 +30,6 @@ namespace SigmaSinavSistemi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kayit));
-            this.combo_kullanici = new System.Windows.Forms.ComboBox();
             this.btn_kayit = new System.Windows.Forms.Button();
             this.txt_sifreonay = new System.Windows.Forms.TextBox();
             this.txt_sifre = new System.Windows.Forms.TextBox();
@@ -38,7 +37,6 @@ namespace SigmaSinavSistemi
             this.txt_kulad = new System.Windows.Forms.TextBox();
             this.txt_soyad = new System.Windows.Forms.TextBox();
             this.txt_ad = new System.Windows.Forms.TextBox();
-            this.lbl_KullaniciTip = new System.Windows.Forms.Label();
             this.lbl_SifreOnay = new System.Windows.Forms.Label();
             this.lbl_Sifre = new System.Windows.Forms.Label();
             this.lbl_KullaniciAdi = new System.Windows.Forms.Label();
@@ -53,24 +51,10 @@ namespace SigmaSinavSistemi
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // combo_kullanici
-            // 
-            this.combo_kullanici.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.combo_kullanici.FormattingEnabled = true;
-            this.combo_kullanici.Items.AddRange(new object[] {
-            "Öğrenci",
-            "Admin",
-            "Sınav Sorumlusu"});
-            this.combo_kullanici.Location = new System.Drawing.Point(450, 390);
-            this.combo_kullanici.Name = "combo_kullanici";
-            this.combo_kullanici.Size = new System.Drawing.Size(151, 28);
-            this.combo_kullanici.TabIndex = 8;
-            this.combo_kullanici.Text = "--Seçin--";
-            // 
             // btn_kayit
             // 
             this.btn_kayit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_kayit.Location = new System.Drawing.Point(450, 433);
+            this.btn_kayit.Location = new System.Drawing.Point(449, 391);
             this.btn_kayit.Name = "btn_kayit";
             this.btn_kayit.Size = new System.Drawing.Size(152, 44);
             this.btn_kayit.TabIndex = 9;
@@ -128,17 +112,6 @@ namespace SigmaSinavSistemi
             this.txt_ad.PlaceholderText = "Ad";
             this.txt_ad.Size = new System.Drawing.Size(151, 27);
             this.txt_ad.TabIndex = 1;
-            // 
-            // lbl_KullaniciTip
-            // 
-            this.lbl_KullaniciTip.AutoSize = true;
-            this.lbl_KullaniciTip.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_KullaniciTip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_KullaniciTip.Location = new System.Drawing.Point(333, 393);
-            this.lbl_KullaniciTip.Name = "lbl_KullaniciTip";
-            this.lbl_KullaniciTip.Size = new System.Drawing.Size(102, 20);
-            this.lbl_KullaniciTip.TabIndex = 4;
-            this.lbl_KullaniciTip.Text = "Kullanıcı Tipi:";
             // 
             // lbl_SifreOnay
             // 
@@ -282,7 +255,6 @@ namespace SigmaSinavSistemi
             this.Controls.Add(this.btn_show);
             this.Controls.Add(this.btn_hide);
             this.Controls.Add(this.cmb_uzanti);
-            this.Controls.Add(this.combo_kullanici);
             this.Controls.Add(this.btn_kayit);
             this.Controls.Add(this.txt_sifreonay);
             this.Controls.Add(this.txt_sifre);
@@ -290,7 +262,6 @@ namespace SigmaSinavSistemi
             this.Controls.Add(this.txt_kulad);
             this.Controls.Add(this.txt_soyad);
             this.Controls.Add(this.txt_ad);
-            this.Controls.Add(this.lbl_KullaniciTip);
             this.Controls.Add(this.lbl_SifreOnay);
             this.Controls.Add(this.lbl_Sifre);
             this.Controls.Add(this.lbl_KullaniciAdi);
@@ -311,8 +282,6 @@ namespace SigmaSinavSistemi
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox combo_kullanici;
         private System.Windows.Forms.Button btn_kayit;
         private System.Windows.Forms.TextBox txt_sifreonay;
         private System.Windows.Forms.TextBox txt_sifre;
@@ -320,7 +289,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.TextBox txt_kulad;
         private System.Windows.Forms.TextBox txt_soyad;
         private System.Windows.Forms.TextBox txt_ad;
-        private System.Windows.Forms.Label lbl_KullaniciTip;
         private System.Windows.Forms.Label lbl_SifreOnay;
         private System.Windows.Forms.Label lbl_Sifre;
         private System.Windows.Forms.Label lbl_KullaniciAdi;
