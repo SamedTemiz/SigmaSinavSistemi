@@ -138,6 +138,7 @@ namespace SigmaSinavSistemi
             {
                 System.IO.File.Delete(uzanti);
             }
+            
             MessageBox.Show("Seçilen soru silinmiştir.");
             cmb_gDogru.Text = "--Seçin--";
             cmb_gkonu.Text = "--Seçin--";
@@ -210,6 +211,11 @@ namespace SigmaSinavSistemi
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void data_Sorular_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }

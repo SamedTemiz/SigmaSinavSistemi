@@ -53,6 +53,7 @@ namespace SigmaSinavSistemi
             this.t_saat = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.sınavlarımToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Logo)).BeginInit();
@@ -91,7 +92,8 @@ namespace SigmaSinavSistemi
             // 
             this.sınavlarımToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sınavaGirToolStripMenuItem,
-            this.istatistikToolStripMenuItem});
+            this.istatistikToolStripMenuItem,
+            this.sınavlarımToolStripMenuItem1});
             this.sınavlarımToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sınavlarımToolStripMenuItem.Image")));
             this.sınavlarımToolStripMenuItem.Name = "sınavlarımToolStripMenuItem";
             this.sınavlarımToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
@@ -144,6 +146,7 @@ namespace SigmaSinavSistemi
             // 
             this.kullanıcıAyarlarıToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kullanıcıAyarlarıToolStripMenuItem.Image")));
             this.kullanıcıAyarlarıToolStripMenuItem.Name = "kullanıcıAyarlarıToolStripMenuItem";
+            this.kullanıcıAyarlarıToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kullanıcıAyarlarıToolStripMenuItem.Text = "Kullanıcı Ayarları";
             this.kullanıcıAyarlarıToolStripMenuItem.Click += new System.EventHandler(this.kullanıcıAyarlarıToolStripMenuItem_Click);
             // 
@@ -151,6 +154,7 @@ namespace SigmaSinavSistemi
             // 
             this.sınavSıklıkDüzeyiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sınavSıklıkDüzeyiToolStripMenuItem.Image")));
             this.sınavSıklıkDüzeyiToolStripMenuItem.Name = "sınavSıklıkDüzeyiToolStripMenuItem";
+            this.sınavSıklıkDüzeyiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sınavSıklıkDüzeyiToolStripMenuItem.Text = "Sınav Sıklık Düzeyi";
             this.sınavSıklıkDüzeyiToolStripMenuItem.Click += new System.EventHandler(this.sınavSıklıkDüzeyiToolStripMenuItem_Click);
             // 
@@ -287,6 +291,12 @@ namespace SigmaSinavSistemi
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
             // 
+            // sınavlarımToolStripMenuItem1
+            // 
+            this.sınavlarımToolStripMenuItem1.Name = "sınavlarımToolStripMenuItem1";
+            this.sınavlarımToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sınavlarımToolStripMenuItem1.Text = "Sınavlarım";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -342,5 +352,6 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sınavSıklıkDüzeyiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sınavlarımToolStripMenuItem1;
     }
 }

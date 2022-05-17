@@ -113,14 +113,13 @@ namespace SigmaSinavSistemi
             string durum = "Hata";
             conn.Open();
             cmd = new SqlCommand("INSERT INTO SoruHavuzu(KonuID, GorselAd, Seviye, DogruCevap)" + "VALUES('" + KonuId + "','" + GorselAd + "','" + Seviye + "','" + DogruCevap + "')", conn);
-
             kontrol = cmd.ExecuteNonQuery();
-            if (kontrol == 1)
-            {
-                durum = "Ekleme işlemi başarılı.";
-            }
             conn.Close();
-            return durum;
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Sigma(SoruId) VALUES ((Select Id from SoruHavuzu WHERE Id = (SELECT MAX(Id) FROM SoruHavuzu)))", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            return durum = "Ekleme işlemi başarılı!";
         }
         public bool Guncelle(int id, int konuid, string seviye, string dogru)
         {
@@ -139,11 +138,14 @@ namespace SigmaSinavSistemi
             bool kontrol = false;
             cmd = new SqlCommand("DELETE FROM SoruHavuzu WHERE Id = '" + id + "'", conn);
             conn.Open();
-            if (cmd.ExecuteNonQuery() != -1)
-            {
-                kontrol = true;
-            }
+            cmd.ExecuteNonQuery();
             conn.Close();
+
+            conn.Open();
+            cmd = new SqlCommand("DELETE FROM Sigma WHERE SoruId = '" + id + "' ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            kontrol = true;
             return kontrol;
         }
         public bool GuncelleOnay(int id, int konuid, string seviye, string dogru, int onay)
@@ -157,6 +159,38 @@ namespace SigmaSinavSistemi
             }
             conn.Close();
             return kontol;
+        }
+            List<SoruHavuzu> havuz = new List<SoruHavuzu>();
+        public List<SoruHavuzu> SoruListele1()
+        {
+            
+            conn.Open();
+            cmd = new SqlCommand("SELECT SoruHavuzu.Id, SoruHavuzu.KonuId, Konular.KonuAdi, SoruHavuzu.GorselAd, SoruHavuzu.Seviye, SoruHavuzu.DogruCevap, SoruHavuzu.Onay From SoruHavuzu INNER JOIN Konular ON SoruHavuzu.KonuId = Konular.KonuId ORDER BY SoruHavuzu.Id ASC", conn);
+            SqlDataReader oku = cmd.ExecuteReader();
+            while (oku.Read())
+            {
+                SoruHavuzu soru = new SoruHavuzu();
+                soru.Id = int.Parse(oku[0].ToString());
+                soru.KonuId = int.Parse(oku[1].ToString());
+                soru.KonuAdi = oku[2].ToString();
+                soru.GorselAd = oku[3].ToString();
+                soru.Seviye = oku[4].ToString();
+                soru.DogruCevap = int.Parse(oku[5].ToString());
+                soru.Onay = bool.Parse(oku[6].ToString()); 
+                havuz.Add(soru);
+            }
+            conn.Close();
+            return havuz;
+        }
+        public int SoruAdet() 
+        {
+            int soruadet = 0;
+            conn.Open();
+            cmd = new SqlCommand("Select count(Id) From SoruHavuzu",conn);
+            soruadet = int.Parse(cmd.ExecuteScalar().ToString());
+            conn.Close();
+            return soruadet;
+        
         }
     }
 }

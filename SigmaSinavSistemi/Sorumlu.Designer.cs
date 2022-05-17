@@ -111,7 +111,7 @@ namespace SigmaSinavSistemi
             this.tabPage1.Controls.Add(this.btn_gozat);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1042, 567);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Soru Ekle";
@@ -223,7 +223,7 @@ namespace SigmaSinavSistemi
             "Denklemler",
             "Fonksiyonlar",
             "Mutlak Değer",
-            "Olasılık-Permütasyon-Kombinasyon-Binom",
+            "Olasılık",
             "Basit Eşitsizlikler",
             "Faktöriyel",
             "Polinomlar"});
@@ -285,7 +285,7 @@ namespace SigmaSinavSistemi
             this.tabPage2.Controls.Add(this.data_Sorular);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1042, 567);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tüm Sorular";
@@ -435,10 +435,10 @@ namespace SigmaSinavSistemi
             "Kareköklü Sayılar",
             "Çarpanlara Ayırma",
             "Bölme-Bölünebilme",
-            "Denklem Çözme",
+            "Denklemler",
             "Fonksiyonlar",
             "Mutlak Değer",
-            "Olasılık-Permütasyon-Kombinasyon-Binom",
+            "Olasılık",
             "Basit Eşitsizlikler",
             "Faktöriyel",
             "Polinomlar"});
@@ -459,10 +459,10 @@ namespace SigmaSinavSistemi
             "Kareköklü Sayılar",
             "Çarpanlara Ayırma",
             "Bölme-Bölünebilme",
-            "Denklem Çözme",
+            "Denklemler",
             "Fonksiyonlar",
             "Mutlak Değer",
-            "Olasılık-Permütasyon-Kombinasyon-Binom",
+            "Olasılık",
             "Basit Eşitsizlikler",
             "Faktöriyel",
             "Polinomlar"});
@@ -542,6 +542,7 @@ namespace SigmaSinavSistemi
             this.data_Sorular.UseCustomBackColor = true;
             this.data_Sorular.UseCustomForeColor = true;
             this.data_Sorular.UseStyleColors = true;
+            this.data_Sorular.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Sorular_CellContentClick);
             this.data_Sorular.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Sorular_CellDoubleClick);
             this.data_Sorular.SelectionChanged += new System.EventHandler(this.data_Sorular_SelectionChanged);
             // 
@@ -581,7 +582,7 @@ namespace SigmaSinavSistemi
             // num_adet
             // 
             this.num_adet.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.num_adet.Location = new System.Drawing.Point(449, 245);
+            this.num_adet.Location = new System.Drawing.Point(528, 243);
             this.num_adet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.num_adet.Name = "num_adet";
             this.num_adet.Size = new System.Drawing.Size(137, 51);
@@ -596,7 +597,7 @@ namespace SigmaSinavSistemi
             // num_sure
             // 
             this.num_sure.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.num_sure.Location = new System.Drawing.Point(449, 144);
+            this.num_sure.Location = new System.Drawing.Point(528, 147);
             this.num_sure.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.num_sure.Name = "num_sure";
             this.num_sure.Size = new System.Drawing.Size(137, 51);
@@ -612,7 +613,7 @@ namespace SigmaSinavSistemi
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(303, 248);
+            this.label2.Location = new System.Drawing.Point(372, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 44);
             this.label2.TabIndex = 1;
@@ -622,7 +623,7 @@ namespace SigmaSinavSistemi
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(291, 147);
+            this.label1.Location = new System.Drawing.Point(360, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 44);
             this.label1.TabIndex = 1;
@@ -631,7 +632,7 @@ namespace SigmaSinavSistemi
             // btn_onay
             // 
             this.btn_onay.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_onay.Location = new System.Drawing.Point(449, 327);
+            this.btn_onay.Location = new System.Drawing.Point(528, 331);
             this.btn_onay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_onay.Name = "btn_onay";
             this.btn_onay.Size = new System.Drawing.Size(137, 53);
