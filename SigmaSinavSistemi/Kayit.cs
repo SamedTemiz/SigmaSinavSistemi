@@ -37,7 +37,7 @@ namespace SigmaSinavSistemi
             ekle.Soyad = txt_soyad.Text;
             ekle.Mail = mail;
             ekle.Sifre = txt_sifre.Text;
-            ekle.KullaniciTipID = combo_kullanici.SelectedIndex;
+           
 
             if (txt_sifre.Text != txt_sifreonay.Text)
             {
