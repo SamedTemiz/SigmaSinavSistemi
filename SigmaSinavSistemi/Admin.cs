@@ -186,7 +186,19 @@ namespace SigmaSinavSistemi
             txtSoyad.Text = dataKul.CurrentRow.Cells[3].Value.ToString();
             txtMail.Text = dataKul.CurrentRow.Cells[4].Value.ToString();
             txtSifre.Text = dataKul.CurrentRow.Cells[5].Value.ToString();
-            combo_kultip.SelectedIndex = int.Parse(dataKul.CurrentRow.Cells[6].Value.ToString()) - 1;
+           // combo_kultip.SelectedIndex = int.Parse(dataKul.CurrentRow.Cells[6].Value.ToString()) - 1;
+            switch (dataKul.CurrentRow.Cells[6].Value)
+            {
+                case 1:
+                    combo_kultip.Text= "Öğrenci";
+                    break;
+                case 2:
+                    combo_kultip.Text = "Admin";
+                    break;
+                case 3:
+                    combo_kultip.Text = "Sınav Sorumlusu";
+                    break;
+            }
         }
         public void kullaniciListele()
         {
@@ -278,7 +290,19 @@ namespace SigmaSinavSistemi
                 txtSoyad.Text = dataKul.CurrentRow.Cells[3].Value.ToString();
                 txtMail.Text = dataKul.CurrentRow.Cells[4].Value.ToString();
                 txtSifre.Text = dataKul.CurrentRow.Cells[5].Value.ToString();
-                combo_kultip.Text = dataKul.CurrentRow.Cells[6].Value.ToString();
+                //combo_kultip.Text = dataKul.CurrentRow.Cells[6].Value.ToString();
+                switch (dataKul.CurrentRow.Cells[6].Value)
+                {
+                    case 1:
+                        combo_kultip.Text = "Öğrenci";
+                        break;
+                    case 2:
+                        combo_kultip.Text = "Admin";
+                        break;
+                    case 3:
+                        combo_kultip.Text = "Sınav Sorumlusu";
+                        break;
+                }
             }
         }
 
