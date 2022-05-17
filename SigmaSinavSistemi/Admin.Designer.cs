@@ -400,7 +400,7 @@ namespace SigmaSinavSistemi
             // btnsguncelle
             // 
             this.btnsguncelle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnsguncelle.Location = new System.Drawing.Point(822, 380);
+            this.btnsguncelle.Location = new System.Drawing.Point(829, 380);
             this.btnsguncelle.Name = "btnsguncelle";
             this.btnsguncelle.Size = new System.Drawing.Size(120, 30);
             this.btnsguncelle.TabIndex = 17;
@@ -415,7 +415,7 @@ namespace SigmaSinavSistemi
             this.cmbonay.Items.AddRange(new object[] {
             "DEVRE DIŞI",
             "AKTİF"});
-            this.cmbonay.Location = new System.Drawing.Point(822, 444);
+            this.cmbonay.Location = new System.Drawing.Point(829, 450);
             this.cmbonay.Name = "cmbonay";
             this.cmbonay.Size = new System.Drawing.Size(121, 29);
             this.cmbonay.TabIndex = 16;
@@ -425,7 +425,7 @@ namespace SigmaSinavSistemi
             // 
             this.lblonay.AutoSize = true;
             this.lblonay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblonay.Location = new System.Drawing.Point(772, 450);
+            this.lblonay.Location = new System.Drawing.Point(779, 456);
             this.lblonay.Name = "lblonay";
             this.lblonay.Size = new System.Drawing.Size(44, 17);
             this.lblonay.TabIndex = 15;
@@ -442,7 +442,7 @@ namespace SigmaSinavSistemi
             "C",
             "D",
             "E"});
-            this.cmbdcevap.Location = new System.Drawing.Point(593, 444);
+            this.cmbdcevap.Location = new System.Drawing.Point(620, 450);
             this.cmbdcevap.Name = "cmbdcevap";
             this.cmbdcevap.Size = new System.Drawing.Size(121, 29);
             this.cmbdcevap.TabIndex = 14;
@@ -455,7 +455,7 @@ namespace SigmaSinavSistemi
             "Kolay",
             "Orta",
             "Zor"});
-            this.cmbseviye.Location = new System.Drawing.Point(332, 444);
+            this.cmbseviye.Location = new System.Drawing.Point(347, 450);
             this.cmbseviye.Name = "cmbseviye";
             this.cmbseviye.Size = new System.Drawing.Size(121, 29);
             this.cmbseviye.TabIndex = 13;
@@ -477,7 +477,7 @@ namespace SigmaSinavSistemi
             "Basit Eşitsizlikler",
             "Faktöriyel",
             "Polinomlar"});
-            this.cmbkonu.Location = new System.Drawing.Point(102, 444);
+            this.cmbkonu.Location = new System.Drawing.Point(112, 450);
             this.cmbkonu.Name = "cmbkonu";
             this.cmbkonu.Size = new System.Drawing.Size(121, 29);
             this.cmbkonu.TabIndex = 12;
@@ -494,7 +494,7 @@ namespace SigmaSinavSistemi
             // txtsoruıd
             // 
             this.txtsoruıd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtsoruıd.Location = new System.Drawing.Point(102, 374);
+            this.txtsoruıd.Location = new System.Drawing.Point(112, 374);
             this.txtsoruıd.Name = "txtsoruıd";
             this.txtsoruıd.ReadOnly = true;
             this.txtsoruıd.Size = new System.Drawing.Size(60, 29);
@@ -514,7 +514,7 @@ namespace SigmaSinavSistemi
             // 
             this.lbldcevap.AutoSize = true;
             this.lbldcevap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbldcevap.Location = new System.Drawing.Point(489, 450);
+            this.lbldcevap.Location = new System.Drawing.Point(516, 456);
             this.lbldcevap.Name = "lbldcevap";
             this.lbldcevap.Size = new System.Drawing.Size(98, 17);
             this.lbldcevap.TabIndex = 8;
@@ -524,7 +524,7 @@ namespace SigmaSinavSistemi
             // 
             this.lblseviye.AutoSize = true;
             this.lblseviye.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblseviye.Location = new System.Drawing.Point(276, 450);
+            this.lblseviye.Location = new System.Drawing.Point(291, 456);
             this.lblseviye.Name = "lblseviye";
             this.lblseviye.Size = new System.Drawing.Size(50, 17);
             this.lblseviye.TabIndex = 7;
@@ -534,7 +534,7 @@ namespace SigmaSinavSistemi
             // 
             this.lblkonu.AutoSize = true;
             this.lblkonu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblkonu.Location = new System.Drawing.Point(51, 450);
+            this.lblkonu.Location = new System.Drawing.Point(61, 456);
             this.lblkonu.Name = "lblkonu";
             this.lblkonu.Size = new System.Drawing.Size(45, 17);
             this.lblkonu.TabIndex = 6;
@@ -544,7 +544,7 @@ namespace SigmaSinavSistemi
             // 
             this.lblıd.AutoSize = true;
             this.lblıd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblıd.Location = new System.Drawing.Point(61, 380);
+            this.lblıd.Location = new System.Drawing.Point(75, 380);
             this.lblıd.Name = "lblıd";
             this.lblıd.Size = new System.Drawing.Size(22, 17);
             this.lblıd.TabIndex = 0;
