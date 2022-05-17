@@ -57,7 +57,7 @@ namespace SigmaSinavSistemi
             if (!kontrolKullanici(kul))
             {
                 conn.Open();
-                cmd = new SqlCommand("INSERT INTO Kullanicilar(KullaniciAd, Ad, Soyad, Mail, Sifre) VALUES ('" + kul.KullaniciAd + "', '" + kul.Ad + "', '" + kul.Soyad + "', '" + kul.Mail + "', '"+kul.Sifre+"')", conn);
+                cmd = new SqlCommand("INSERT INTO Kullanicilar(KullaniciAd, Ad, Soyad, Mail, Sifre, KullaniciTipID) VALUES ('" + kul.KullaniciAd + "', '" + kul.Ad + "', '" + kul.Soyad + "', '" + kul.Mail + "', '"+kul.Sifre+ "', '"+kul.KullaniciTipID+ "')", conn);
                 
                 if (cmd.ExecuteNonQuery() != -1)
                 {
