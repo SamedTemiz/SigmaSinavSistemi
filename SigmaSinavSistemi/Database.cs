@@ -12,7 +12,7 @@ namespace SigmaSinavSistemi
         public SqlCommand cmd;
         public void Baglan()
         {
-            conn = new SqlConnection("Data Source=DESKTOP-0BN5RDE\\SQLSERVER;Initial Catalog=SigmaSinav;Integrated Security=True");
+            conn = new SqlConnection("Data Source=DESKTOP-4KG79CQ\\SQLEXPRESS;Initial Catalog=SigmaSinav;Integrated Security=True");
         }
     }
 }
