@@ -27,6 +27,9 @@ namespace SigmaSinavSistemi
             {
                 guncelle.Sifreguncelle(txt_kulad.Text, txt_yenisifre.Text);
                 MessageBox.Show("Şifreniz Güncellendi.");
+                Giris g = new Giris();
+                this.Close();
+                g.Show();
             }
             
         }

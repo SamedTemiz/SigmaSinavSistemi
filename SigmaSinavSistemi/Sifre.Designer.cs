@@ -49,7 +49,7 @@ namespace SigmaSinavSistemi
             this.btn_gonder.Location = new System.Drawing.Point(173, 73);
             this.btn_gonder.Name = "btn_gonder";
             this.btn_gonder.Size = new System.Drawing.Size(90, 29);
-            this.btn_gonder.TabIndex = 6;
+            this.btn_gonder.TabIndex = 3;
             this.btn_gonder.Text = "Gönder";
             this.btn_gonder.UseVisualStyleBackColor = true;
             this.btn_gonder.Click += new System.EventHandler(this.btn_gonder_Click);
@@ -62,7 +62,7 @@ namespace SigmaSinavSistemi
             this.lbl_mail.Location = new System.Drawing.Point(39, 39);
             this.lbl_mail.Name = "lbl_mail";
             this.lbl_mail.Size = new System.Drawing.Size(96, 20);
-            this.lbl_mail.TabIndex = 4;
+            this.lbl_mail.TabIndex = 8;
             this.lbl_mail.Text = "Mail Adresi :";
             // 
             // lbl_kod
@@ -73,7 +73,7 @@ namespace SigmaSinavSistemi
             this.lbl_kod.Location = new System.Drawing.Point(45, 123);
             this.lbl_kod.Name = "lbl_kod";
             this.lbl_kod.Size = new System.Drawing.Size(90, 20);
-            this.lbl_kod.TabIndex = 4;
+            this.lbl_kod.TabIndex = 9;
             this.lbl_kod.Text = "Onay Kodu:";
             // 
             // txt_Onaykodu
@@ -83,7 +83,7 @@ namespace SigmaSinavSistemi
             this.txt_Onaykodu.Name = "txt_Onaykodu";
             this.txt_Onaykodu.PlaceholderText = "Onay Kodu";
             this.txt_Onaykodu.Size = new System.Drawing.Size(151, 28);
-            this.txt_Onaykodu.TabIndex = 5;
+            this.txt_Onaykodu.TabIndex = 4;
             // 
             // btn_onayla
             // 
@@ -91,7 +91,7 @@ namespace SigmaSinavSistemi
             this.btn_onayla.Location = new System.Drawing.Point(295, 119);
             this.btn_onayla.Name = "btn_onayla";
             this.btn_onayla.Size = new System.Drawing.Size(90, 29);
-            this.btn_onayla.TabIndex = 8;
+            this.btn_onayla.TabIndex = 5;
             this.btn_onayla.Text = "Onayla";
             this.btn_onayla.UseVisualStyleBackColor = true;
             this.btn_onayla.Click += new System.EventHandler(this.btn_onayla_Click);
@@ -108,7 +108,7 @@ namespace SigmaSinavSistemi
             this.cmb_uzanti.Location = new System.Drawing.Point(288, 35);
             this.cmb_uzanti.Name = "cmb_uzanti";
             this.cmb_uzanti.Size = new System.Drawing.Size(180, 28);
-            this.cmb_uzanti.TabIndex = 10;
+            this.cmb_uzanti.TabIndex = 2;
             this.cmb_uzanti.Text = "@sigmatematik.com";
             // 
             // txt_mail
@@ -118,7 +118,7 @@ namespace SigmaSinavSistemi
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.PlaceholderText = "Mail";
             this.txt_mail.Size = new System.Drawing.Size(151, 28);
-            this.txt_mail.TabIndex = 9;
+            this.txt_mail.TabIndex = 1;
             // 
             // btn_cikis
             // 
@@ -129,7 +129,7 @@ namespace SigmaSinavSistemi
             this.btn_cikis.Location = new System.Drawing.Point(472, -1);
             this.btn_cikis.Name = "btn_cikis";
             this.btn_cikis.Size = new System.Drawing.Size(30, 30);
-            this.btn_cikis.TabIndex = 79;
+            this.btn_cikis.TabIndex = 7;
             this.btn_cikis.UseVisualStyleBackColor = false;
             this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
@@ -138,7 +138,7 @@ namespace SigmaSinavSistemi
             this.prog_IslemSuresi.Location = new System.Drawing.Point(22, 169);
             this.prog_IslemSuresi.Name = "prog_IslemSuresi";
             this.prog_IslemSuresi.Size = new System.Drawing.Size(460, 29);
-            this.prog_IslemSuresi.TabIndex = 80;
+            this.prog_IslemSuresi.TabIndex = 6;
             // 
             // timer1
             // 
