@@ -61,7 +61,7 @@
   <data name="btn_cikis.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACl0SURBVHhe7d1f
+        DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACl0SURBVHhe7d1f
         qKbVdfjxZ4gOZEYvxEEGOhBGbMhFGwqh3kyn2A72othKL8yF/e9AvZBQkIABCyLxxmkCte1FhUSUouGX
         KoRK/2gpRlAJtLQQG1AKxdomhGRMI5Oog7b5rTX7eZ111l4zc8559vO+69nvd8FnMbPfOeesfdh77WfO
         ed/nHX7yk5/AkTgiTojT4ox4XDwjnhOviFfFG+KsOC/0gwBcmu4T3S+6b3T/6D7S/aT7SveX7jPdb7rv
@@ -242,13 +242,16 @@
         QmCC
 </value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>67</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAADcCAIAAAAJPMQyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAABRBJREFUeF7t1LFtAgAQBLAMwszUTEgRZQj6O4k697LkGfzzeL4AOEbuAAfJHeAg
+        DAAACwwBP0AiyAAABRBJREFUeF7t1LFtAgAQBLAMwszUTEgRZQj6O4k697LkGfzzeL4AOEbuAAfJHeAg
         uQMcJHeAg+QOcJDcAQ6SO8BBcgc46Fvu798/AP6h6LrJHWBPdN3kDrAnum5yB9gTXTe5A+yJrpvcAfZE
         103uAHui6yZ3gD3RdZM7wJ7ouskdYE903eQOsCe6bnIH2BNdN7kD7Imum9wB9kTXTe4Ae6LrJneAPdF1
         kzvAnui6yR1gT3Td5A6wJ7pucgfYE103uQPsia6b3AH2RNdN7gB7ousmd4A90XWTO8Ce6LrJHWBPdN3k

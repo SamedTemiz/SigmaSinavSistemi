@@ -53,7 +53,7 @@ namespace SigmaSinavSistemi
             // 
             // btn_kayit
             // 
-            this.btn_kayit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_kayit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_kayit.Location = new System.Drawing.Point(449, 391);
             this.btn_kayit.Name = "btn_kayit";
             this.btn_kayit.Size = new System.Drawing.Size(152, 44);
@@ -65,19 +65,21 @@ namespace SigmaSinavSistemi
             // txt_sifreonay
             // 
             this.txt_sifreonay.Location = new System.Drawing.Point(450, 347);
+            this.txt_sifreonay.Multiline = true;
             this.txt_sifreonay.Name = "txt_sifreonay";
             this.txt_sifreonay.PasswordChar = '*';
             this.txt_sifreonay.PlaceholderText = "Şifre Onay";
-            this.txt_sifreonay.Size = new System.Drawing.Size(151, 27);
+            this.txt_sifreonay.Size = new System.Drawing.Size(180, 28);
             this.txt_sifreonay.TabIndex = 7;
             // 
             // txt_sifre
             // 
             this.txt_sifre.Location = new System.Drawing.Point(450, 304);
+            this.txt_sifre.Multiline = true;
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.PasswordChar = '*';
             this.txt_sifre.PlaceholderText = "Şifre";
-            this.txt_sifre.Size = new System.Drawing.Size(151, 27);
+            this.txt_sifre.Size = new System.Drawing.Size(180, 28);
             this.txt_sifre.TabIndex = 6;
             // 
             // txt_mail
@@ -86,41 +88,44 @@ namespace SigmaSinavSistemi
             this.txt_mail.Multiline = true;
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.PlaceholderText = "Mail";
-            this.txt_mail.Size = new System.Drawing.Size(151, 28);
+            this.txt_mail.Size = new System.Drawing.Size(180, 28);
             this.txt_mail.TabIndex = 4;
             // 
             // txt_kulad
             // 
             this.txt_kulad.Location = new System.Drawing.Point(450, 217);
+            this.txt_kulad.Multiline = true;
             this.txt_kulad.Name = "txt_kulad";
-            this.txt_kulad.PlaceholderText = "Kullanıcı Ad";
-            this.txt_kulad.Size = new System.Drawing.Size(151, 27);
+            this.txt_kulad.PlaceholderText = "Kullanıcı Adı";
+            this.txt_kulad.Size = new System.Drawing.Size(180, 28);
             this.txt_kulad.TabIndex = 3;
             // 
             // txt_soyad
             // 
             this.txt_soyad.Location = new System.Drawing.Point(450, 174);
+            this.txt_soyad.Multiline = true;
             this.txt_soyad.Name = "txt_soyad";
             this.txt_soyad.PlaceholderText = "Soyad";
-            this.txt_soyad.Size = new System.Drawing.Size(151, 27);
+            this.txt_soyad.Size = new System.Drawing.Size(180, 28);
             this.txt_soyad.TabIndex = 2;
             // 
             // txt_ad
             // 
             this.txt_ad.Location = new System.Drawing.Point(450, 131);
+            this.txt_ad.Multiline = true;
             this.txt_ad.Name = "txt_ad";
             this.txt_ad.PlaceholderText = "Ad";
-            this.txt_ad.Size = new System.Drawing.Size(151, 27);
+            this.txt_ad.Size = new System.Drawing.Size(180, 28);
             this.txt_ad.TabIndex = 1;
             // 
             // lbl_SifreOnay
             // 
             this.lbl_SifreOnay.AutoSize = true;
             this.lbl_SifreOnay.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_SifreOnay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_SifreOnay.Location = new System.Drawing.Point(350, 349);
+            this.lbl_SifreOnay.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_SifreOnay.Location = new System.Drawing.Point(322, 349);
             this.lbl_SifreOnay.Name = "lbl_SifreOnay";
-            this.lbl_SifreOnay.Size = new System.Drawing.Size(85, 20);
+            this.lbl_SifreOnay.Size = new System.Drawing.Size(109, 25);
             this.lbl_SifreOnay.TabIndex = 5;
             this.lbl_SifreOnay.Text = "Şifre Onay:";
             // 
@@ -128,10 +133,10 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_Sifre.AutoSize = true;
             this.lbl_Sifre.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Sifre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Sifre.Location = new System.Drawing.Point(388, 305);
+            this.lbl_Sifre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Sifre.Location = new System.Drawing.Point(377, 305);
             this.lbl_Sifre.Name = "lbl_Sifre";
-            this.lbl_Sifre.Size = new System.Drawing.Size(45, 20);
+            this.lbl_Sifre.Size = new System.Drawing.Size(58, 25);
             this.lbl_Sifre.TabIndex = 6;
             this.lbl_Sifre.Text = "Şifre:";
             // 
@@ -139,10 +144,10 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_KullaniciAdi.AutoSize = true;
             this.lbl_KullaniciAdi.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_KullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(335, 219);
+            this.lbl_KullaniciAdi.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(301, 219);
             this.lbl_KullaniciAdi.Name = "lbl_KullaniciAdi";
-            this.lbl_KullaniciAdi.Size = new System.Drawing.Size(100, 20);
+            this.lbl_KullaniciAdi.Size = new System.Drawing.Size(127, 25);
             this.lbl_KullaniciAdi.TabIndex = 7;
             this.lbl_KullaniciAdi.Text = "Kullanıcı Adı:";
             // 
@@ -150,10 +155,10 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_Mail.AutoSize = true;
             this.lbl_Mail.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Mail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Mail.Location = new System.Drawing.Point(389, 262);
+            this.lbl_Mail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Mail.Location = new System.Drawing.Point(379, 262);
             this.lbl_Mail.Name = "lbl_Mail";
-            this.lbl_Mail.Size = new System.Drawing.Size(43, 20);
+            this.lbl_Mail.Size = new System.Drawing.Size(55, 25);
             this.lbl_Mail.TabIndex = 8;
             this.lbl_Mail.Text = "Mail:";
             // 
@@ -161,10 +166,10 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_Soyad.AutoSize = true;
             this.lbl_Soyad.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Soyad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Soyad.Location = new System.Drawing.Point(377, 175);
+            this.lbl_Soyad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Soyad.Location = new System.Drawing.Point(364, 175);
             this.lbl_Soyad.Name = "lbl_Soyad";
-            this.lbl_Soyad.Size = new System.Drawing.Size(55, 20);
+            this.lbl_Soyad.Size = new System.Drawing.Size(72, 25);
             this.lbl_Soyad.TabIndex = 9;
             this.lbl_Soyad.Text = "Soyad:";
             // 
@@ -172,10 +177,10 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_Ad.AutoSize = true;
             this.lbl_Ad.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Ad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Ad.Location = new System.Drawing.Point(399, 132);
+            this.lbl_Ad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Ad.Location = new System.Drawing.Point(395, 132);
             this.lbl_Ad.Name = "lbl_Ad";
-            this.lbl_Ad.Size = new System.Drawing.Size(33, 20);
+            this.lbl_Ad.Size = new System.Drawing.Size(42, 25);
             this.lbl_Ad.TabIndex = 10;
             this.lbl_Ad.Text = "Ad:";
             // 
@@ -188,7 +193,7 @@ namespace SigmaSinavSistemi
             "@hotmail.com",
             "@outlook.com",
             "@gmail.com"});
-            this.cmb_uzanti.Location = new System.Drawing.Point(600, 260);
+            this.cmb_uzanti.Location = new System.Drawing.Point(629, 260);
             this.cmb_uzanti.Name = "cmb_uzanti";
             this.cmb_uzanti.Size = new System.Drawing.Size(180, 28);
             this.cmb_uzanti.TabIndex = 5;
@@ -199,10 +204,10 @@ namespace SigmaSinavSistemi
             this.btn_show.BackColor = System.Drawing.Color.White;
             this.btn_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_show.Image = ((System.Drawing.Image)(resources.GetObject("btn_show.Image")));
-            this.btn_show.Location = new System.Drawing.Point(569, 304);
+            this.btn_show.Location = new System.Drawing.Point(598, 304);
             this.btn_show.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(32, 27);
+            this.btn_show.Size = new System.Drawing.Size(32, 28);
             this.btn_show.TabIndex = 13;
             this.btn_show.UseVisualStyleBackColor = false;
             this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
@@ -212,10 +217,10 @@ namespace SigmaSinavSistemi
             this.btn_hide.BackColor = System.Drawing.Color.White;
             this.btn_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hide.Image = ((System.Drawing.Image)(resources.GetObject("btn_hide.Image")));
-            this.btn_hide.Location = new System.Drawing.Point(569, 304);
+            this.btn_hide.Location = new System.Drawing.Point(598, 304);
             this.btn_hide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(32, 27);
+            this.btn_hide.Size = new System.Drawing.Size(32, 28);
             this.btn_hide.TabIndex = 12;
             this.btn_hide.UseVisualStyleBackColor = false;
             this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);

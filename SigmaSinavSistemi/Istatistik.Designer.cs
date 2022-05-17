@@ -162,11 +162,11 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_sinavTarih.AutoSize = true;
             this.lbl_sinavTarih.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_sinavTarih.Font = new System.Drawing.Font("Bebas Neue", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sinavTarih.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_sinavTarih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.lbl_sinavTarih.Location = new System.Drawing.Point(488, 97);
+            this.lbl_sinavTarih.Location = new System.Drawing.Point(474, 91);
             this.lbl_sinavTarih.Name = "lbl_sinavTarih";
-            this.lbl_sinavTarih.Size = new System.Drawing.Size(131, 38);
+            this.lbl_sinavTarih.Size = new System.Drawing.Size(151, 44);
             this.lbl_sinavTarih.TabIndex = 37;
             this.lbl_sinavTarih.Text = "SINAV TARİHİ";
             // 
@@ -174,13 +174,13 @@ namespace SigmaSinavSistemi
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.label1.Location = new System.Drawing.Point(315, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 52);
+            this.label1.Size = new System.Drawing.Size(157, 44);
             this.label1.TabIndex = 36;
-            this.label1.Text = "SINAV TARİHİ";
+            this.label1.Text = "SINAV TARİHİ:";
             // 
             // data_sonuclistesi
             // 
@@ -501,11 +501,11 @@ namespace SigmaSinavSistemi
             // 
             this.lbl_sinavno.AutoSize = true;
             this.lbl_sinavno.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_sinavno.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_sinavno.Font = new System.Drawing.Font("Bebas Neue", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_sinavno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.lbl_sinavno.Location = new System.Drawing.Point(315, 36);
             this.lbl_sinavno.Name = "lbl_sinavno";
-            this.lbl_sinavno.Size = new System.Drawing.Size(145, 52);
+            this.lbl_sinavno.Size = new System.Drawing.Size(125, 44);
             this.lbl_sinavno.TabIndex = 11;
             this.lbl_sinavno.Text = "SINAV NO :";
             // 

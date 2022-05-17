@@ -13,6 +13,7 @@ namespace SigmaSinavSistemi
     {
         public Kayit()
         {
+            
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
@@ -100,7 +101,9 @@ namespace SigmaSinavSistemi
 
         private void btn_cikis_Click(object sender, EventArgs e)
         {
+            Giris g = new Giris();
             this.Close();
+            g.Show();
         }
     }
 }

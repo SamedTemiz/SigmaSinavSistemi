@@ -29,6 +29,7 @@ namespace SigmaSinavSistemi
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sifre));
             this.btn_gonder = new System.Windows.Forms.Button();
             this.lbl_mail = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@ namespace SigmaSinavSistemi
             this.cmb_uzanti = new System.Windows.Forms.ComboBox();
             this.txt_mail = new System.Windows.Forms.TextBox();
             this.btn_cikis = new System.Windows.Forms.Button();
+            this.prog_IslemSuresi = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btn_gonder
@@ -85,7 +88,7 @@ namespace SigmaSinavSistemi
             // btn_onayla
             // 
             this.btn_onayla.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_onayla.Location = new System.Drawing.Point(173, 163);
+            this.btn_onayla.Location = new System.Drawing.Point(295, 119);
             this.btn_onayla.Name = "btn_onayla";
             this.btn_onayla.Size = new System.Drawing.Size(90, 29);
             this.btn_onayla.TabIndex = 8;
@@ -130,12 +133,25 @@ namespace SigmaSinavSistemi
             this.btn_cikis.UseVisualStyleBackColor = false;
             this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
+            // prog_IslemSuresi
+            // 
+            this.prog_IslemSuresi.Location = new System.Drawing.Point(22, 169);
+            this.prog_IslemSuresi.Name = "prog_IslemSuresi";
+            this.prog_IslemSuresi.Size = new System.Drawing.Size(460, 29);
+            this.prog_IslemSuresi.TabIndex = 80;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Sifre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(501, 220);
+            this.Controls.Add(this.prog_IslemSuresi);
             this.Controls.Add(this.btn_cikis);
             this.Controls.Add(this.cmb_uzanti);
             this.Controls.Add(this.txt_mail);
@@ -165,5 +181,7 @@ namespace SigmaSinavSistemi
         private System.Windows.Forms.ComboBox cmb_uzanti;
         private System.Windows.Forms.TextBox txt_mail;
         private System.Windows.Forms.Button btn_cikis;
+        private System.Windows.Forms.ProgressBar prog_IslemSuresi;
+        private System.Windows.Forms.Timer timer1;
     }
 }
