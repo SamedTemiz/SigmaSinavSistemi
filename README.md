@@ -9,9 +9,9 @@ Programın düzgün çalışabilmesi için aşağıdaki yönergeleri takip edini
 
 - [Files](https://github.com/SamedTemiz/SigmaSinavSistemi/tree/master/Files) dosyasında bulunan [SigmaSinav.bak](https://github.com/SamedTemiz/SigmaSinavSistemi/blob/master/Files/SigmaSinav.bak) dosyasını indiriniz.
  
-- İndirilen dosyayı gerekli adımları SQL Server'a ekleyiniz.
+- İndirilen dosyayı gerekli adımlarla SQL Server'a ekleyiniz.
 
-- Visual Studio 2019 ve üstü sürümde olan çalışma ortamına sahip olmanız gerekmektedir.
+- Visual Studio 2019 ve üstü sürümde olan çalışma ortamını kullanınız.
 
 
 ## PROJE BİLGİLERİ
