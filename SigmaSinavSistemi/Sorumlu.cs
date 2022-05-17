@@ -45,6 +45,7 @@ namespace SigmaSinavSistemi
 
             data_Sorular.Columns[5].HeaderText = "DOĞRU CEVAP";
             data_Sorular.Columns[5].Width = 100;
+           
 
             foreach (DataGridViewColumn item in data_Sorular.Columns)
             {
@@ -114,7 +115,7 @@ namespace SigmaSinavSistemi
         {
             int konuid = cmb_gkonu.SelectedIndex + 1;
             string Seviye = cmb_gseviye.Text;
-            string DogruCevap = cmb_gDogru.Text;
+            int DogruCevap = cmb_gDogru.SelectedIndex + 1;
             int Id = int.Parse(data_Sorular.CurrentRow.Cells[0].Value.ToString());
 
             sorular.Guncelle(Id, konuid, Seviye, DogruCevap);
@@ -131,14 +132,13 @@ namespace SigmaSinavSistemi
         private void btn_Sil_Click(object sender, EventArgs e)
         {
             int Id = int.Parse(data_Sorular.CurrentRow.Cells[0].Value.ToString());
-            string imagefile = Path.GetFileName(pic_soru.ImageLocation);
-            string uzanti = Path.Combine(Application.StartupPath + "\\soru\\" + imagefile);
+            string imagefile = Path.GetFileName(data_Sorular.CurrentRow.Cells[3].Value.ToString());
+            string uzanti = Path.Combine(Application.StartupPath + @"\soru\" + imagefile);
             sorular.Sil(Id);
             if (System.IO.File.Exists(uzanti))
             {
                 System.IO.File.Delete(uzanti);
             }
-            
             MessageBox.Show("Seçilen soru silinmiştir.");
             cmb_gDogru.Text = "--Seçin--";
             cmb_gkonu.Text = "--Seçin--";

@@ -121,7 +121,7 @@ namespace SigmaSinavSistemi
             conn.Close();
             return durum = "Ekleme işlemi başarılı!";
         }
-        public bool Guncelle(int id, int konuid, string seviye, string dogru)
+        public bool Guncelle(int id, int konuid, string seviye, int dogru)
         {
             bool kontol = false;
             cmd = new SqlCommand("Update SoruHavuzu" + " Set KonuId='" + konuid + "',Seviye='" + seviye + "',DogruCevap='" + dogru + "' where Id='" + id + "'", conn);
