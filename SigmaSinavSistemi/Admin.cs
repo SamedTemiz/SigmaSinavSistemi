@@ -126,7 +126,7 @@ namespace SigmaSinavSistemi
             Kul.Soyad = txtSoyad.Text;
             Kul.Mail = txtMail.Text;
             Kul.Sifre = txtSifre.Text;
-            Kul.KullaniciTipID = combo_kultip.SelectedIndex;
+            Kul.KullaniciTipID = combo_kultip.SelectedIndex+1;
             kul.ekleKullanici(Kul);
             txtId.Text = "";
             txtKulAd.Text = "";
@@ -146,7 +146,7 @@ namespace SigmaSinavSistemi
             string soyad = txtSoyad.Text;
             string mail = txtMail.Text;
             string sifre = txtSifre.Text;
-            int kul_tip = int.Parse(combo_kultip.SelectedIndex.ToString() + 1);
+            int kul_tip = int.Parse(combo_kultip.SelectedIndex.ToString()) + 1;
             int Id = int.Parse(dataKul.CurrentRow.Cells[0].Value.ToString());
 
             kul.KullaniciGuncelle(Id, kulad, ad, soyad, mail, sifre, kul_tip);
@@ -186,19 +186,8 @@ namespace SigmaSinavSistemi
             txtSoyad.Text = dataKul.CurrentRow.Cells[3].Value.ToString();
             txtMail.Text = dataKul.CurrentRow.Cells[4].Value.ToString();
             txtSifre.Text = dataKul.CurrentRow.Cells[5].Value.ToString();
-           // combo_kultip.SelectedIndex = int.Parse(dataKul.CurrentRow.Cells[6].Value.ToString()) - 1;
-            switch (dataKul.CurrentRow.Cells[6].Value)
-            {
-                case 1:
-                    combo_kultip.Text= "Öğrenci";
-                    break;
-                case 2:
-                    combo_kultip.Text = "Admin";
-                    break;
-                case 3:
-                    combo_kultip.Text = "Sınav Sorumlusu";
-                    break;
-            }
+           combo_kultip.SelectedIndex = int.Parse(dataKul.CurrentRow.Cells[6].Value.ToString()) - 1;
+            
         }
         public void kullaniciListele()
         {
@@ -290,19 +279,7 @@ namespace SigmaSinavSistemi
                 txtSoyad.Text = dataKul.CurrentRow.Cells[3].Value.ToString();
                 txtMail.Text = dataKul.CurrentRow.Cells[4].Value.ToString();
                 txtSifre.Text = dataKul.CurrentRow.Cells[5].Value.ToString();
-                //combo_kultip.Text = dataKul.CurrentRow.Cells[6].Value.ToString();
-                switch (dataKul.CurrentRow.Cells[6].Value)
-                {
-                    case 1:
-                        combo_kultip.Text = "Öğrenci";
-                        break;
-                    case 2:
-                        combo_kultip.Text = "Admin";
-                        break;
-                    case 3:
-                        combo_kultip.Text = "Sınav Sorumlusu";
-                        break;
-                }
+                combo_kultip.Text = dataKul.CurrentRow.Cells[6].Value.ToString();
             }
         }
 
