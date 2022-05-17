@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Threading;
 
 namespace SigmaSinavSistemi
 {
@@ -18,6 +19,8 @@ namespace SigmaSinavSistemi
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
+            
+
         }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -71,6 +74,7 @@ namespace SigmaSinavSistemi
 
         private void btn_gonder_Click(object sender, EventArgs e)
         {
+            
             SifreGuncelle kontrol = new SifreGuncelle();
             string mail = txt_mail.Text + cmb_uzanti.Text;
             if (kontrol.MailKontrol(mail) != true)
@@ -80,7 +84,7 @@ namespace SigmaSinavSistemi
             }
             else
             {
-
+                this.timer1.Start();
                 MailMessage sms = new MailMessage();
                 SmtpClient client = new SmtpClient();
                 onaykodu = rnd.Next(999, 9999).ToString();
@@ -93,13 +97,22 @@ namespace SigmaSinavSistemi
                 sms.Subject = "Güvenlik Kodu";
                 sms.Body = "Onay Kodunuz: " + onaykodu;
                 client.Send(sms);
+                Thread.Sleep(1000);
                 MessageBox.Show("Güvenlik Kodu Gönderildi.");
+                prog_IslemSuresi.Visible = false;
             }
         }
 
         private void btn_cikis_Click(object sender, EventArgs e)
         {
+            Giris g = new Giris();
             this.Close();
+            g.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.prog_IslemSuresi.Increment(3);
         }
     }
 }
