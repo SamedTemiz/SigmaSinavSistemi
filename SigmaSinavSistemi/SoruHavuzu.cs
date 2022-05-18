@@ -148,7 +148,7 @@ namespace SigmaSinavSistemi
             kontrol = true;
             return kontrol;
         }
-        public bool GuncelleOnay(int id, int konuid, string seviye, string dogru, int onay)
+        public bool GuncelleOnay(int id, int konuid, string seviye, int dogru, int onay)
         {
             bool kontol = false;
             cmd = new SqlCommand("Update SoruHavuzu" + " Set KonuId='" + konuid + "',Seviye='" + seviye + "',DogruCevap='" + dogru + "',Onay='" + onay + "' where Id='" + id + "'", conn);
