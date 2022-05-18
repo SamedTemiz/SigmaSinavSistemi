@@ -11,6 +11,11 @@ Programın düzgün çalışabilmesi için aşağıdaki yönergeleri takip edini
  
 - İndirilen dosyayı gerekli adımlarla SQL Server'a ekleyiniz.
 
+- [Files](https://github.com/SamedTemiz/SigmaSinavSistemi/tree/master/Files) içerisindeki [soru.rar](https://github.com/SamedTemiz/SigmaSinavSistemi/blob/master/Files/soru.rar) dosyasını bilgisayarınıza indiriniz.
+
+- RAR dosyasını ayıklayınız, çıkan **soru** klasörünü belirtilen dizine yerleştiriniz;
+    >   ..\SigmaSinavSistemi\SigmaSinavSistemi\bin\Debug\netcoreapp3.1
+
 - Visual Studio 2019 ve üstü sürümde olan çalışma ortamını kullanınız.
 
 
