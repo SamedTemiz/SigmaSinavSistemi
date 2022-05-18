@@ -208,7 +208,7 @@ namespace SigmaSinavSistemi
         {
             int konuid = cmbkonu.SelectedIndex + 1;
             string Seviye = cmbseviye.Text;
-            string DogruCevap = cmbdcevap.Text;
+            int DogruCevap = cmbdcevap.SelectedIndex+1;
             int Id = int.Parse(datasorularadmin.CurrentRow.Cells[0].Value.ToString());
             int onay = cmbonay.SelectedIndex ;
 
@@ -295,6 +295,20 @@ namespace SigmaSinavSistemi
         private void cmbonay_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Giris g = new Giris();
+            g.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Giris g = new Giris();
+            g.Show();
         }
     }
 }
